@@ -1,7 +1,5 @@
-import React, {useState} from "react";
+import React from "react";
 
-import books from "../../constants/books";
-import texts from "../../constants/texts";
 import images from "../../constants/images";
 import {FaSearch, FaUser} from 'react-icons/fa';
 import {AiFillClockCircle} from 'react-icons/ai';

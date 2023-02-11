@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 
 import './App.scss';
-import './styles/Body.scss';
+import '../src/styles/Body.scss';
 
 
 

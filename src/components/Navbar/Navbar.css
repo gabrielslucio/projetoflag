@@ -4,7 +4,6 @@
   justify-content: space-between;
   background: white;
   padding: 20px 80px;
-  box-shadow: 0 5px 15px black;
 }
 .app__navbar .app__navbar-logo img {
   height: 100px;
