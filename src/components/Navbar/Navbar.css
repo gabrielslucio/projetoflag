@@ -1,1 +1,66 @@
-/*# sourceMappingURL=Navbar.css.map */
+.app__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px black;
+}
+.app__navbar .app__navbar-logo img {
+  height: 100px;
+}
+.app__navbar .app__navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app__navbar .app__navbar-links li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+.app__navbar .app__navbar-links a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  transition: 0.15s ease-in-out;
+}
+.app__navbar .app__navbar-links li a:hover,
+.app__navbar .app__navbar-links li a.active {
+  color: gold;
+}
+.app__navbar .app__navbar-links li a:hover::after,
+.app__navbar .app__navbar-links li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: gold;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+.app__navbar .app__navbar-user .user,
+.app__navbar .app__navbar-user .clock {
+  display: flex;
+  color: gold;
+}
+.app__navbar .app__navbar-user a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.app__navbar .app__navbar-user p {
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  transition: 0.2s ease-in-out;
+}
+.app__navbar .app__navbar-user p:hover {
+  color: gold;
+}/*# sourceMappingURL=Navbar.css.map */
