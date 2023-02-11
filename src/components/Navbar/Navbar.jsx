@@ -1,19 +1,19 @@
 import React from "react";
 
-import images from "../../constants/images";
-import {FaSearch, FaUser} from 'react-icons/fa';
+import {FaUser} from 'react-icons/fa';
 import {AiFillClockCircle} from 'react-icons/ai';
+
+import images from "../../constants/images";
 
 import './Navbar.scss'
 
-function Navbar () {
 
+const Navbar = () => {
     return (
-        
-            <nav className='app__navbar'>
-                <div className='app__navbar-logo'>
-                    <img className='img-fluid d-none d-md-inline-block' src={images.logo} alt='Logo da biblioteca' />
-                </div>
+        <nav className='app__navbar'>
+            <div className='app__navbar-logo'>
+                <img src={images.logo} alt='Logo da biblioteca' />
+            </div>
 
             <ul className='app__navbar-links'>
                 <li ><a className='active' href='livros'>Livros</a></li>
@@ -23,21 +23,21 @@ function Navbar () {
             </ul>
             
             <ul className='app__navbar-user'>
-
-                    <li>
-                        <a href='minha conta'>
-                        <FaUser className="user"/>
-                        <p>Minha Conta</p>
-                        </a>
-                    </li> 
+                <li>
+                    <a href='minha conta'>
+                    <FaUser className="user"/>
+                    <p>Minha Conta</p>
+                    </a>
+                </li> 
                 
-                    <li>
-                        <a href='horário'>
-                        <AiFillClockCircle className="clock"/>                        
-                        <p>Horário</p>
-                        </a>
-                    </li>        
-                </ul>
+                <li>
+                    <a href='horário'>
+                    <AiFillClockCircle className="clock"/>                        
+                    <p>Horário</p>
+                    </a>
+                </li>        
+            </ul>
+
         </nav>
         
     )
