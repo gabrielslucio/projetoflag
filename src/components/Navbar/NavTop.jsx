@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {FaAddressCard, FaSearch, FaUser} from 'react-icons/fa';
 import {AiFillClockCircle} from 'react-icons/ai';
+
+import books from "../../constants/books";
 
 import images from "../../constants/images";
 
@@ -9,6 +11,20 @@ import './NavTop.scss'
 
 
 const NavTop = () => {
+
+    const [searchInput, setSearchInput] = useState("");
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.taget.value);
+    };
+
+    if (searchInput.length > 0) {
+        books.filter((books) => {
+        return books.name.match(searchInput);
+        });
+    }
+
     return (
         
         <nav className='app__navbar'>
@@ -34,7 +50,11 @@ const NavTop = () => {
                                 <input
                                     type="text"
                                     placeholder="Procurar"
+                                    //onChange={handleChange}
+                                    //value={searchInput}
                                 />
+
+                               
 
                                
                             

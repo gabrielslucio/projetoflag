@@ -47,7 +47,7 @@
   align-items: right;
   padding: 11px 7px 11px 10px;
   width: 550px;
-  height: 20px;
+  height: 30px;
   border: none;
   border-radius: 50%;
   outline: none;
@@ -60,6 +60,12 @@
 }
 .app__navbar .app__navbar-search .app__navbar-box .app__navbar-buttonc .app__navbar-button {
   color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.app__navbar .app__navbar-search .app__navbar-box .app__navbar-buttonc .app__navbar-button:hover {
+  color: gold;
+  background: #fff;
 }
 .app__navbar .app__navbar-search .app__navbar-box .app__navbar-buttonc button {
   display: flex;
