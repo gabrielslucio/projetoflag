@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 
+
+
+
 import {FaAddressCard, FaSearch, FaUser} from 'react-icons/fa';
 import {AiFillClockCircle} from 'react-icons/ai';
+import {BsFillArrowDownCircleFill} from 'react-icons/bs';
 
 import books from "../../constants/books";
+
 
 import images from "../../constants/images";
 
@@ -12,17 +17,10 @@ import './NavTop.scss'
 
 const NavTop = () => {
 
-    const [searchInput, setSearchInput] = useState("");
+    const [open, setOpen] = React.useState(false);
 
-    const handleChange = (e) => {
-        e.preventDefault();
-        setSearchInput(e.taget.value);
-    };
-
-    if (searchInput.length > 0) {
-        books.filter((books) => {
-        return books.name.match(searchInput);
-        });
+    const handleOpen = () => {
+        setOpen(!open);
     }
 
     return (
@@ -37,34 +35,70 @@ const NavTop = () => {
             <div className="app__navbar-container">
                 <div className="app__navbar-search">
                     <div className="app__navbar-box">
-
-                    
                         <div className="app__navbar-bar">
-                        
                             <div className="app__navbar-separator">
-
-                            
-
                                 <div className="app__navbar-controler">
-                            
                                 <input
                                     type="text"
                                     placeholder="Procurar"
                                     //onChange={handleChange}
                                     //value={searchInput}
                                 />
+                            </div>
+                        </div>
+                    </div>
 
-                               
+                    {/* <div className="app__navbar-dropdown">
+                        <div className="app__navbar-button">
+                            <ul>
+                                <li 
+                                    onClick={handleOpen}
+						            className="app__navbar-first">
 
-                               
+                                        <input type="checkbox" />
+                                        Pesquisar
+                                </li>
+                                
+                                {open ? (
+                                    <ul className="app__navbar-ul">
+                                        <li className="app__navbar-li-btn">
+                                            <input type="checkbox" className="app__navbar-movies" />
+                                            <a href="#">Filmes</a>                                            
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" className="app__navbar-magazines" />
+                                            <a href="#">Revistas</a>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" className="app__navbar-school" />
+                                            <a href="#">Apoio Escolar</a>
+                                        </li>
+
+                                    </ul>
+                                ) : null}
+                                
+                            </ul>
+                            </div>
+                        </div>
+                                */}
+
+                    <div className="app__navbar-dropdown">
+                        <form action = "#">
+                            <select name="Pesquisar" id="app__navbar-menu">
+                                <option value="movies"><p>Filmes</p></option>
+                                <option value="magazines">Revistas</option>
+                                <option value="school">Apoio escolar</option>
+                            </select>
                             
-                               
-                                </div>
-                                </div>
-                                </div>
+                        </form>
+                    </div>
 
                         <div className="app__navbar-buttonc">
-                         <button className="app__navbar-button" type="submit">
+                         <button 
+                            className="app__navbar-button"  
+                            type="submit"
+                            value="Submit"
+                        >
                                     <FaSearch></FaSearch>
                             </button>
                         </div>
