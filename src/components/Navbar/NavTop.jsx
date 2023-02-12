@@ -1,27 +1,32 @@
 import React from "react";
 
-import {FaUser} from 'react-icons/fa';
+import {FaSearch, FaUser} from 'react-icons/fa';
 import {AiFillClockCircle} from 'react-icons/ai';
 
 import images from "../../constants/images";
 
-import './Navbar.scss'
+import './NavTop.scss'
 
 
-const Navbar = () => {
+const NavTop = () => {
     return (
         <nav className='app__navbar'>
+            <div className="app__navbar-container">
             <div className='app__navbar-logo'>
                 <img src={images.logo} alt='Logo da biblioteca' />
             </div>
 
-            <ul className='app__navbar-links'>
-                <li ><a className='active' href='livros'>Livros</a></li>
-                <li><a href='serviços'>Serviços</a></li>
-                <li><a href='eventos'>Eventos</a></li>
-                <li><a href='contatos'>Contatos</a></li>
-            </ul>
-            
+            <input 
+                type="text"
+                placeholder="Procurar"
+            />
+            <button type="submit">
+                <FaSearch />
+            </button>
+
+
+
+
             <ul className='app__navbar-user'>
                 <li>
                     <a href='minha conta'>
@@ -37,11 +42,11 @@ const Navbar = () => {
                     </a>
                 </li>        
             </ul>
-
+            </div>
         </nav>
         
     )
 }
 
-export default Navbar;
+export default NavTop;
 
