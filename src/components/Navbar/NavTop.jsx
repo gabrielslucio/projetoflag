@@ -20,18 +20,36 @@ const NavTop = () => {
             
             <div className="app__navbar-container">
                 <div className="app__navbar-search">
-                    <div className="app__navbar-bar">
-                        <div className="app__navbar-separator">
-                            <input 
-                                className="app__navbar-input"
-                                type="text"
-                                placeholder="Procurar"
-                            />
-                        </div>
-                            <button type="submit">
-                                <FaSearch />
+                    <div className="app__navbar-box">
+
+                    
+                        <div className="app__navbar-bar">
+                        
+                            <div className="app__navbar-separator">
+
+                            
+
+                                <div className="app__navbar-controler">
+                            
+                                <input
+                                    type="text"
+                                    placeholder="Procurar"
+                                />
+
+                               
+                            
+                               
+                                </div>
+                                </div>
+                                </div>
+
+                        <div className="app__navbar-buttonc">
+                         <button className="app__navbar-button" type="submit">
+                                    <FaSearch></FaSearch>
                             </button>
-                    </div>
+                        </div>
+                        </div>
+                    
                 </div>
 
                 <div className="app__navbar-userbox">
@@ -58,8 +76,10 @@ const NavTop = () => {
                             </li>     
                     </ul>
                 </div>
+                
             </div>
         </nav>
+        
         
         
     )

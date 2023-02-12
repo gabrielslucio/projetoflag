@@ -6,56 +6,6 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
-  /*
-          .app__navbar-search {
-
-              position: absolute;
-              height: 58px;
-              left: 0px;
-              right: 276px;
-              top: 45px;
-
-              background: rgba(221, 221, 221, 0.1);
-
-              border: 1px solid #DDDDDD;
-              border-radius: 50px;
-
-              .app__navbar-bar {
-                  position: absolute;
-                  height: 50px;
-                  left: 4px;
-                  right: 4px;
-                  top: 4px;
-              }
-
-              .app__navbar-separator {
-                  display: flex;
-                  flex-direction: row;
-                  align-items: flex-start;
-                  padding: 3px 4px 3px 3px;
-
-                  position: absolute;
-                  width: 513px;
-                  height: 50px;
-                  left: 0px;
-                  top: 0px;
-                  border-right: 1px solid #DDDDDD;
-              }
-
-              .app__navbar-input {
-                  display: flex;
-                  flex-direction: row;
-                  align-items: flex-start;
-                  padding: 11px 7px 11px 31px;
-
-                  width: 506px;
-                  height: 44px;
-
-                  border-radius: 4px;
-              }
-
-          }
-  */
 }
 .app__navbar .app__navbar-logo {
   display: flex;
@@ -71,8 +21,56 @@
   flex-direction: column;
   justify-content: center;
 }
-.app__navbar .app__navbar-search .app__navbar-bar {
+.app__navbar .app__navbar-search .app__navbar-box {
+  box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
+  width: 900px;
+  height: 58px;
+  background: rgba(221, 221, 221, 0.1);
+  border: 1px solid #DDDDDD;
+  border-radius: 50px;
+}
+.app__navbar .app__navbar-search .app__navbar-box .app__navbar-bar {
+  width: 600px;
+  height: 51px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 3px 4px 3px 3px;
+  border-right: 1px solid #DDDDDD;
+}
+.app__navbar .app__navbar-search .app__navbar-box .app__navbar-bar input {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  padding: 11px 7px 11px 10px;
+  width: 550px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+.app__navbar .app__navbar-search .app__navbar-box .app__navbar-buttonc {
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app__navbar .app__navbar-search .app__navbar-box .app__navbar-buttonc .app__navbar-button {
+  color: #fff;
+}
+.app__navbar .app__navbar-search .app__navbar-box .app__navbar-buttonc button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 44px;
+  padding: 8px 20px 8px 20px;
+  background: gold;
+  border: 1px solid gold;
+  border-radius: 50px;
 }
 .app__navbar .app__navbar-container {
   display: flex;
