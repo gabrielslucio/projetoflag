@@ -16,11 +16,9 @@ const NavTop = () => {
             <div className='app__navbar-logo'>
                     <img src={images.logo} alt='Logo da biblioteca' />
                 </div>
-            <div className="app__navbar-container">
-
-               
-
             
+            
+            <div className="app__navbar-container">
                 <div className="app__navbar-search">
                     <div className="app__navbar-bar">
                         <div className="app__navbar-separator">
