@@ -1,115 +1,125 @@
-/*
-
 .app__navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
-    padding: 20px 80px;
-
-    .app__navbar-logo img {
-        height: 100px;
-    }
-
-    .app__navbar-links {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        li {
-            list-style: none;
-            padding: 0 20px;
-            position: relative;
-        }
-
-        a {
-            text-transform: uppercase;
-            text-decoration: none;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: black;
-            font-family: 'Roboto', sans-serif;
-
-            transition: 0.15s ease-in-out;
-
-        }
-
-        li a:hover,
-        li a.active {
-            color: gold;
-        }
-
-        li a:hover::after,
-        li a.active::after {
-            content: "";
-            width: 30%;
-            height: 2px;
-            background: gold;
-            position: absolute;
-            bottom: -4px;
-            left: 20px;
-        }
-    }
-
-    .app__navbar-user {    
-
-        .user, 
-        .clock {
-            display: flex;
-            color: gold;
-        }
-
-       a {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-       }
-
-       p {
-        margin: 10px;
-        text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: 500;
-        color: black;
-        font-family: 'Roboto', sans-serif; 
-
-        transition: 0.20s ease-in-out;
-        }
-
-        p:hover {
-            color: gold;
-
-        }
-
-    }
-
-
-}
-
-*/
-.app__navbar {
-  box-sizing: border-box;
   width: 100%;
   height: 149px;
   background: white;
   border-bottom: 1px solid #DDDDDD;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  /*
+          .app__navbar-search {
+
+              position: absolute;
+              height: 58px;
+              left: 0px;
+              right: 276px;
+              top: 45px;
+
+              background: rgba(221, 221, 221, 0.1);
+
+              border: 1px solid #DDDDDD;
+              border-radius: 50px;
+
+              .app__navbar-bar {
+                  position: absolute;
+                  height: 50px;
+                  left: 4px;
+                  right: 4px;
+                  top: 4px;
+              }
+
+              .app__navbar-separator {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  padding: 3px 4px 3px 3px;
+
+                  position: absolute;
+                  width: 513px;
+                  height: 50px;
+                  left: 0px;
+                  top: 0px;
+                  border-right: 1px solid #DDDDDD;
+              }
+
+              .app__navbar-input {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  padding: 11px 7px 11px 31px;
+
+                  width: 506px;
+                  height: 44px;
+
+                  border-radius: 4px;
+              }
+
+          }
+  */
 }
 .app__navbar .app__navbar-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px 0p 0px 43px;
-  gap: 43px;
-  position: absolute;
-  width: 100%;
+  width: 1109px;
   height: 148px;
 }
-.app__navbar .app__navbar-container .app__navbar-logo img {
+.app__navbar .app__navbar-container .app__navbar-userbox {
+  position: absolute;
+  width: 239px;
+  height: 148px;
+  right: 0px;
+  top: 0px;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox ul .app__navbbar-user {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0px 0.26px 0p 0.26px;
-  width: 316px;
-  height: 84px;
+  padding: 0px 53px 1px 1px;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 53px 1px 1px;
+  width: 239px;
+  height: 48px;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: #DDDDDD;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox ul a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 11px 42px 12px 28px;
+  gap: 10px;
+  width: 185px;
+  height: 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  line-height: 25px;
+  font-weight: 300;
+  color: #373737;
+  font-family: "Robot", sans-serif;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox ul a p {
+  width: 91px;
+  height: 23.5px;
+  transition: 0.3s ease-in-out;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox ul a p:hover {
+  color: gold;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox ul a .user {
+  width: 16px;
+  height: 16px;
+  color: gold;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox ul a .clock {
+  width: 16px;
+  height: 16px;
+  color: gold;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox ul a .card {
+  width: 16px;
+  height: 16px;
+  color: gold;
 }/*# sourceMappingURL=NavTop.css.map */
