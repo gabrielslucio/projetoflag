@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NavTop from './components/Navbar/NavTop';
-import NavBot from './components/NavBot';
+import NavBot from './components/Navbar/NavBot';
 
 import './App.scss';
 import '../src/styles/Body.scss';
