@@ -1,26 +1,31 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 import {FaAddressCard, FaSearch, FaUser} from 'react-icons/fa';
 import {AiFillClockCircle} from 'react-icons/ai';
 import {BsFillArrowDownCircleFill} from 'react-icons/bs';
 
-import books from "../../constants/books";
-
 import images from "../../constants/images";
+
+import Data from '../../Data.json';
 
 import './NavTop.scss'
 
 
-const NavTop = () => {
+function NavTop() {
 
-    const [books, setBooks] = useState([])
+    const [value, setValue] = useState ('');
 
+    const onChange = (event) => {
+        setValue(event.target.value);
+    }
+
+    const onSearch = (searchTerm) => {
+        setValue(searchTerm);
+
+        console.log("search", searchTerm);
+
+    }
     
-
-
-    
-    
-
     return (
         
         <nav className='app__navbar'>
@@ -32,32 +37,52 @@ const NavTop = () => {
             
             <div className="app__navbar-container">
                 <div className="app__navbar-search">
+               
                     <div className="app__navbar-box">
+                    
                         <div className="app__navbar-bar">
-                            <div className="app__navbar-separator">
-                                
-                                <div className="app__navbar-controler">
-                                    
-                                <input
-                                    type="text"
-                                    placeholder="Procurar"
-                                />
 
-                                
+                        <input 
+                                        type="text" 
+                                        placeholder="Procurar"
+                                        value={value}
+                                        onChange={onChange}
+                                    />   
+                       
+                    <div className="app__navbar-results">
+                                    {Data.filter(item => {
+                                        const searchTerm = value.toLowerCase();
+                                        const name = item.name.toLowerCase();
 
-                               
+                                        return (searchTerm && name.startsWith(searchTerm) && name !== searchTerm
+                                        );
+                                    })
+                                    .slice(0,10)
+                                    .map((item) => ( 
+                                        <div
+                                            className="app__navbar-row"
+                                            onClick={()=> onSearch(item.name)} 
+                                            key={item.id}
+                                        >  
+                                        <a href="#">
+                                            {item.name}
+                                        </a>
+                                        </div>
+                                    ))}
+                     </div>
 
-
+                    
+                            
+                                                        
                                 
-                                
-                            </div>
-                        </div>
                     </div>
+                
 
                     <div className="app__navbar-dropdown">
                         <form action = "#">
                             <select name="Pesquisar" id="app__navbar-menu">
-                                <option value="movies"><p>Filmes</p></option>
+                                <option value="books">Livros</option>
+                                <option value="movies">Filmes</option>
                                 <option value="magazines">Revistas</option>
                                 <option value="school">Apoio escolar</option>
                             </select>
@@ -68,8 +93,7 @@ const NavTop = () => {
                         <div className="app__navbar-buttonc">
                             <button 
                                 className="app__navbar-button"  
-                                type="submit"
-                                
+                                onClick={() => onSearch(value) }
                             >
                                 <FaSearch></FaSearch>
                             </button>

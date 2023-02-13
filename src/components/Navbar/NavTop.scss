@@ -27,13 +27,17 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: flex;
+
+            position: relative;
+
+            
 
             .app__navbar-box {
-
                 box-sizing: border-box;
                 display: flex;
                 
-                justify-content: space-between;
+                justify-content: center;
                 width: 900px;
                 height: 58px;
 
@@ -72,6 +76,16 @@
 
                         background: rgba(221, 221, 221, 0);
                     }
+
+                 
+                    
+                        
+
+                        
+                
+
+                    
+
                 }
 
                 .app__navbar-buttonc {
@@ -97,8 +111,6 @@
                         
                     }
 
-
-                    
                     button {
                         display: flex;
                         align-items: center;
@@ -113,8 +125,11 @@
                         
                     }
                 }
+
+                
             }
         }
+        
 
         .app__navbar-dropdown {
             display: flex;
