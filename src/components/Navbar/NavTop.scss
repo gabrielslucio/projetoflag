@@ -27,16 +27,28 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex;
 
             position: relative;
+
+            .app__navbar-results {
+                width: 200px;
+                margin-top: 5px;
+                margin-left: 50px;
+                height: 0px;
+
+                display: flex;
+                flex-direction: column;
+                align-items: right;
+                
+
+                
+            }
 
             
 
             .app__navbar-box {
                 box-sizing: border-box;
                 display: flex;
-                
                 justify-content: center;
                 width: 900px;
                 height: 58px;
@@ -49,17 +61,13 @@
                 .app__navbar-bar {
                     width: 600px;
                     height: 51px;
-                    
-                    
                     display: flex;
-                    justify-content: left;
                     align-items: center;
                     padding: 3px 4px 3px 3px;
 
                     border-right: 1px solid #DDDDDD;
 
                     input {
-
                         margin: 20px;
                         display: flex;
                         flex-direction: row;
@@ -76,14 +84,8 @@
 
                         background: rgba(221, 221, 221, 0);
                     }
-
-                 
-                    
                         
-
                         
-                
-
                     
 
                 }
@@ -256,8 +258,6 @@
                 }
             }
         }
-
-        
     }
             
                 

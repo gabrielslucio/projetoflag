@@ -37,40 +37,26 @@ function NavTop() {
             
             <div className="app__navbar-container">
                 <div className="app__navbar-search">
-               
+                    
+
+              
                     <div className="app__navbar-box">
+
                     
                         <div className="app__navbar-bar">
+                         
+                       
+                            
 
-                        <input 
+                                <input 
                                         type="text" 
                                         placeholder="Procurar"
                                         value={value}
                                         onChange={onChange}
-                                    />   
+                                    />  
+                            
                        
-                    <div className="app__navbar-results">
-                                    {Data.filter(item => {
-                                        const searchTerm = value.toLowerCase();
-                                        const name = item.name.toLowerCase();
-
-                                        return (searchTerm && name.startsWith(searchTerm) && name !== searchTerm
-                                        );
-                                    })
-                                    .slice(0,10)
-                                    .map((item) => ( 
-                                        <div
-                                            className="app__navbar-row"
-                                            onClick={()=> onSearch(item.name)} 
-                                            key={item.id}
-                                        >  
-                                        <a href="#">
-                                            {item.name}
-                                        </a>
-                                        </div>
-                                    ))}
-                     </div>
-
+                   
                     
                             
                                                         
@@ -98,6 +84,28 @@ function NavTop() {
                                 <FaSearch></FaSearch>
                             </button>
                         </div>
+                        </div>
+                    
+                        <div className="app__navbar-results">
+                                            {Data.filter(item => {
+                                                const searchTerm = value.toLowerCase();
+                                                const name = item.name.toLowerCase();
+
+                                                return (searchTerm && name.startsWith(searchTerm) && name !== searchTerm
+                                                );
+                                            })
+                                            .slice(0,10)
+                                            .map((item) => ( 
+                                                <div
+                                                    className="app__navbar-row"
+                                                    onClick={()=> onSearch(item.name)} 
+                                                    key={item.id}
+                                                >  
+                                                <a href="#">
+                                                    {item.name}
+                                                </a>
+                                                </div>
+                                            ))}
                         </div>
                     
                 </div>
@@ -128,6 +136,8 @@ function NavTop() {
                 </div>
                 
             </div>
+
+            
         </nav>
         
         
