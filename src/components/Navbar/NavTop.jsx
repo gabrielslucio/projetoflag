@@ -101,9 +101,13 @@ function NavTop() {
                                                     onClick={()=> onSearch(item.name)} 
                                                     key={item.id}
                                                 >  
-                                                <a href="#">
-                                                    {item.name}
-                                                </a>
+                                                <table>
+                                                    <tr>
+                                                <th><a href="#">
+                                                    {item.name}</a></th>
+                                                
+                                                </tr>
+                                                </table>
                                                 </div>
                                             ))}
                         </div>
