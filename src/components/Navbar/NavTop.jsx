@@ -90,24 +90,25 @@ function NavTop() {
                                             {Data.filter(item => {
                                                 const searchTerm = value.toLowerCase();
                                                 const name = item.name.toLowerCase();
+                                                const author = item.author.toLowerCase();
 
                                                 return (searchTerm && name.startsWith(searchTerm) && name !== searchTerm
                                                 );
+
+                                                
                                             })
-                                            .slice(0,10)
+                                            .slice(0,10)                                            
                                             .map((item) => ( 
                                                 <div
                                                     className="app__navbar-row"
                                                     onClick={()=> onSearch(item.name)} 
                                                     key={item.id}
                                                 >  
-                                                <table>
-                                                    <tr>
-                                                <th><a href="#">
-                                                    {item.name}</a></th>
-                                                
-                                                </tr>
-                                                </table>
+                                                    <table>
+                                                        <tr>
+                                                            <td><a href="#">{item.name}</a></td>
+                                                        </tr>
+                                                    </table>
                                                 </div>
                                             ))}
                         </div>
