@@ -22,3 +22,13 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 src/assets/logo.png
+src/container/Livros/Livros.css.map
+src/container/Livros/Livros.css
+src/assets/book01.webp
+src/assets/book02.jpg
+src/assets/book03.webp
+src/assets/book04.webp
+src/components/NavTop/NavTop.css.map
+
+src/container/Livros/Livros.css
+src/components/NavTop/NavTop.css.map
