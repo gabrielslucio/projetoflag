@@ -1,7 +1,7 @@
 import React from 'react';
 
-import NavTop from './components/Navbar/NavTop';
-import NavBot from './components/Navbar/NavBot';
+import NavTop from './components/NavTop/NavTop';
+import NavBot from './components/NavBot/NavBot';
 
 import Data from './Data.json';
 
