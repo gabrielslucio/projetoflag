@@ -22,6 +22,47 @@
   justify-content: center;
   position: relative;
 }
+.app__navbar .app__navbar-search .app__navbar-results {
+  width: 200px;
+  margin-top: 5px;
+  margin-left: 50px;
+  height: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
+.app__navbar .app__navbar-search .app__navbar-results table {
+  z-index: 10;
+  margin: auto;
+  height: 40px;
+  width: 100%;
+  background: rgb(255, 215, 0);
+  padding: 5px;
+  border-radius: 1px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+  cursor: pointer;
+}
+.app__navbar .app__navbar-search .app__navbar-results table tr {
+  text-align: center;
+  border: 1px solid #fff;
+  color: #666B85;
+  font-size: 16px;
+  font-weight: normal;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+.app__navbar .app__navbar-search .app__navbar-results table tr:hover td {
+  background: #373737;
+  color: #FFFFFF;
+  border-top: 1px solid #22262e;
+}
+.app__navbar .app__navbar-search .app__navbar-results table a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
 .app__navbar .app__navbar-search .app__navbar-box {
   box-sizing: border-box;
   display: flex;
@@ -36,7 +77,6 @@
   width: 600px;
   height: 51px;
   display: flex;
-  justify-content: left;
   align-items: center;
   padding: 3px 4px 3px 3px;
   border-right: 1px solid #DDDDDD;
@@ -45,6 +85,7 @@
   margin: 20px;
   display: flex;
   flex-direction: row;
+  align-items: right;
   padding: 11px 7px 11px 10px;
   width: 550px;
   height: 30px;

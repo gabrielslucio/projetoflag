@@ -33,12 +33,7 @@
   align-items: center;
   padding: 19px 17px 13px 24px;
 }
-.app__navbot .app__navbot-links li {
-  position: relative;
-}
 .app__navbot .app__navbot-links a {
-  display: flex;
-  align-items: center;
   letter-spacing: 0.64px;
   text-transform: uppercase;
   text-decoration: none;
@@ -57,10 +52,7 @@
 .app__navbot .app__navbot-links li a:hover::after,
 .app__navbot .app__navbot-links li a.active::after {
   content: "";
-  width: 30%;
+  width: 3%;
   height: 2px;
   background: gold;
-  position: absolute;
-  bottom: 13px;
-  left: 25px;
 }/*# sourceMappingURL=NavBot.css.map */
