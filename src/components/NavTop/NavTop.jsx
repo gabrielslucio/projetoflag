@@ -5,9 +5,8 @@ import {AiFillClockCircle} from 'react-icons/ai';
 
 import images from "../../constants/images";
 
-import Data from '../../Data.json';
-
 import './NavTop.scss'
+import books from "../../constants/books";
 
 
 function NavTop() {
@@ -27,8 +26,8 @@ function NavTop() {
     return (        
         <nav className='app__navbar'>
             <div className='app__navbar-logo'>
-                    <img src={images.logo} alt='Logo da biblioteca' />
-                </div>
+                <img src={images.logo} alt='Logo da biblioteca' />
+            </div>
                 
             <div className="app__navbar-container">
                 <div className="app__navbar-search">
@@ -65,14 +64,13 @@ function NavTop() {
                         </div>
                     
                         <div className="app__navbar-results">
-                           {Data.filter(item => {
+                           {books.filter(item => {
                              const searchTerm = value.toLowerCase();
                              const name = item.name.toLowerCase();
 
                              return (searchTerm && name.startsWith(searchTerm) && name !== searchTerm
                              );                                                
-                             })
-                             .slice(0,10)                                            
+                             })                                         
                              .map((item) => ( 
                                  <div
                                     className="app__navbar-row"
