@@ -24,7 +24,7 @@ const Servicos = () => {
                         <a href="#"><RiComputerLine /></a>
                         <p>Requisita um dos nossos computadores</p>
                     </div>
-                    
+
                     <div className="app__room">
                         <a href="#"><MdMeetingRoom /></a>
                         <p>Requisita uma das nossas salas</p>
@@ -34,7 +34,6 @@ const Servicos = () => {
                         <a href="#"><MdLocalMovies /></a>
                         <p>Requisita um dos nossos filmes</p>
                     </div>
-                    
             </div>
         </div>        
     );
