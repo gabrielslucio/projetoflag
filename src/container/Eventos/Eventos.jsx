@@ -22,6 +22,14 @@ const Eventos = () => {
                     </div>
                 </div>
             </div>
+            <div className="app__eventos-text">
+                <h1>Eventos</h1>
+                <p>Explora todos os eventos disponíveis ou sugere um e diz-nos o que gostarias de ver!</p>
+                
+                <div className="app__eventos-sugere">
+                    <button type="submit">Sugestões</button>
+                </div>
+            </div>
         </div>
     );
 }
