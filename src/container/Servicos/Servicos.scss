@@ -87,7 +87,24 @@
            }
         
         a {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+
+            width: 80px;
+
             font-size: 3rem;
+            background: gold;
+            color: #fff;
+            border: 2px solid gold;
+            border-radius: 50px;
+
+            transition: 0.30s ease-in-out;
+        }
+
+        a:hover {
+            width: 30%;
+            background: #fff;
             color: gold;
         }
     }
