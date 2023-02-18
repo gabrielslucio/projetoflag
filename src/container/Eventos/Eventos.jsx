@@ -10,15 +10,15 @@ const Eventos = () => {
             <div className="app__eventos-container">
                 <div className="app__eventos-imgs">
                     <div className="app__img01">
-                        <img src={images.event01} alt="" />
+                        <a href="#"><img src={images.event01} alt="" /></a>
                     </div>
 
                     <div className="app__img02">
-                        <img src={images.event02} alt="" />
+                        <a href=""><img src={images.event02} alt="" /></a>
                     </div>
 
                     <div className="app__img03">
-                        <img src={images.event03} alt="" />
+                        <a href=""><img src={images.event03} alt="" /></a>
                     </div>
                 </div>
             </div>
