@@ -6,6 +6,7 @@ import Livros from './container/Livros/Livros';
 import Servicos from './container/Servicos/Servicos';
 import Eventos from './container/Eventos/Eventos';
 import Contatos from './container/Contatos/Contatos';
+import FooterBot from './components/FooterBot/FooterBot';
 
 import './App.scss';
 import '../src/styles/Body.scss';
@@ -21,6 +22,7 @@ function App() {
       <Servicos />
       <Eventos />
       <Contatos />
+      <FooterBot />
     </div>
   );
 }
