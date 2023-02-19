@@ -53,39 +53,36 @@ function NavTop() {
                         </form>
                     </div>
 
-                        <div className="app__navbar-buttonc">
-                            <button 
-                                className="app__navbar-button"  
-                                onClick={() => onSearch(value) }
+                    <div className="app__navbar-buttonc">
+                        <button 
+                            className="app__navbar-button"  
+                            onClick={() => onSearch(value) }
                             >
-                                <FaSearch></FaSearch>
+                            <FaSearch></FaSearch>
                             </button>
                         </div>
-                        </div>
+                    </div>
                     
-                        <div className="app__navbar-results">
-                           {books.filter(item => {
-                             const searchTerm = value.toLowerCase();
-                             const name = item.name.toLowerCase();
+                    <div className="app__navbar-results">
+                       {books.filter(item => {
+                         
+                         const searchTerm = value.toLowerCase();
+                         const name = item.name.toLowerCase();
 
-                             return (searchTerm && name.startsWith(searchTerm) && name !== searchTerm
-                             );                                                
-                             })                                         
-                             .map((item) => ( 
-                                 <div
-                                    className="app__navbar-row"
-                                    onClick={()=> onSearch(item.name)} 
-                                    key={item.id}
-                                 >  
-                                 <table>
+                         return (searchTerm && name.startsWith(searchTerm) && name !== searchTerm
+                         );                                                
+                       })                                        
+                         .map((item) => ( 
+                            <div className="app__navbar-row" onClick={()=> onSearch(item.name)} key={item.id}>  
+                                <table>
                                     <tr>
                                         <td><a href="#">{item.name}</a></td>
                                     </tr>
-                                 </table>
-                                </div>
-                            ))}
-                        </div>
+                                </table>
+                            </div>
+                        ))}
                     </div>
+                 </div>
 
                 <div className="app__navbar-userbox">
                     <ul className='app__navbar-user'>
@@ -108,8 +105,8 @@ function NavTop() {
                             </a>
                         </li>     
                     </ul>
-                </div>                
-            </div>            
+                </div> 
+            </div>
         </nav>
     )
 }
