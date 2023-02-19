@@ -1,6 +1,8 @@
 import React from "react";
 
+
 import '../NavBot/NavBot.scss';
+
 
 const NavBot = () => {
 
