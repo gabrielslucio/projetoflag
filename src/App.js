@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
 import NavTop from './components/NavTop/NavTop';
 import NavBot from './components/NavBot/NavBot';
@@ -19,15 +18,36 @@ import Header from './components/Header/Header';
 function App() {
   return (
     <div className="App">
-      <NavTop />   
-      <NavBot /> 
-      <Header />
-      <Livros />
-      <Servicos />
-      <Eventos />
-      <Contatos />
-      <FooterTop />
-      <FooterBot />
+      
+        <NavTop />   
+        <NavBot /> 
+
+       
+          <Header />
+        
+        
+        
+          <Livros />
+      
+        
+        
+          <Servicos />
+        
+
+       
+          <Eventos />
+      
+
+        
+          <Contatos />
+        
+        <FooterTop />
+        <FooterBot />
+      
+
+
+
+
     </div>
   );
 }
