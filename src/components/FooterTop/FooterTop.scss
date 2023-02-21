@@ -56,3 +56,68 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .app__footertop {
+        background-color: #252524;
+    
+        display: flex;
+        justify-content: center;
+
+        
+        
+        .app__footertop-container {
+            width: 50%;
+            height: 300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            gap: 100px;
+    
+            .app__footertop-library {
+                display: flex;
+            }
+    
+            .app__footertop-howdo {
+                height: 65%;
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+    
+            h3 {
+                padding: 3px;
+                font-family: 'Roboto', sans-serif;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 0.2rem;
+                color: gold;
+            }
+    
+            a {
+                letter-spacing: 0.1rem;
+                font-family: 'Roboto', sans-serif;
+                text-transform: capitalize;
+                text-decoration: none;
+                color: #fff;
+    
+                transition: 0.3s ease-in-out;
+            }
+    
+            a:hover {
+                color: gold;
+            }
+    
+            p {
+                padding: 3px;
+            }
+    
+            img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+}
