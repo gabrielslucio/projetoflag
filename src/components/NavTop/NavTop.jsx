@@ -109,6 +109,19 @@ function NavTop() {
                     </ul>
                 </div> 
             </div>
+            <div className="app__navbar-mobile">
+                <div className="app__users-mobile">
+                    <FaUser className="user-mobile"/>
+                </div>
+
+                <div className="app__schedule-mobile">
+                    <AiFillClockCircle className="clock-mobile"/>
+                </div>
+
+                <div className="app__card-mobile">
+                    <FaAddressCard className="card-mobile" />
+                </div>
+            </div>
         </nav>
     )
 }
