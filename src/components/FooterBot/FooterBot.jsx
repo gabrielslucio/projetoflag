@@ -15,6 +15,11 @@ const FooterBot = () => {
                 <span>|</span>
                 <p>Site Designed by Gabriel</p> 
             </div>
+
+            <div className="app__footer-mobile">
+                <p>2023 Biblioteca X <span>|</span> Todos os direitos reservados
+                <span>|</span>Site Designed by Gabriel</p>
+            </div>
         </footer>
 
         
