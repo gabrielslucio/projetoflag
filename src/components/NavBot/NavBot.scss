@@ -53,5 +53,35 @@
     
       }
     }
+
+    
 }
 
+@media only screen and (max-width: 768px) {
+  .app__navbot {
+
+    width: 470px;
+
+    .app__navbot-links {
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .app__navbot {
+
+    width: 410px;
+
+    .app__navbot-links {
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
