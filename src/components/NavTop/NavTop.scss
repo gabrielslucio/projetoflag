@@ -10,8 +10,7 @@
         display: flex;
         justify-content: center;
 
-       
-
+        
         .app__navbar-logo {
             display: flex;
             align-items: center;
@@ -205,45 +204,55 @@
 
         .app__navbar-container {
                 display: flex;
-                justify-content: center;
-                width: 1109px;
+                justify-content: space-around;
+                align-items: center;
+               
+                width: 100%;
                 height: 148px;
 
+             
+
             .app__navbar-userbox {
-                    position: absolute;
-                    width: 239px;
-                    height: 148px;
-                    right: 0px;
-                    top: 0px;
+
+                display: flex;
+                justify-content: right;
+
+                .app__navbar-account {
+                    display: flex;
+                    justify-content: center;
+
+                    border: 1px #DDDDDD solid;
+                    
 
                    
+                }
 
-                    ul {
-                     .app__navbbar-user {
-                      display: flex;
-                      flex-direction: row;   
-                      align-items: flex-start;
-                      padding: 0px 53px 1px 1px;
-                        }
+                .app__navbar-schedule {
+                    display: flex;
+                    justify-content: center;
+
+                    border: 1px #DDDDDD solid;
+                }
+
+                .app__navbar-cartao {
+                    display: flex;
+                    justify-content: center;
+
+                    border: 1px #DDDDDD solid;
+                }
+                  
 
                     li {
 
-                        padding-left: 15px;
-            
-                        display: flex;
-                        align-items: center;
-                        justify-content: left;
+                        width: 100%;
                         
-
-                        width: 240px;
                         height: 49px;
 
-                        border-width: 0px 0px 1px 1px;
-                        border-style: solid;
-                        border-color: #DDDDDD;
                     }
 
                     a {
+                        padding-left: 20px;
+                        padding-right: 20px;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -258,7 +267,6 @@
 
                         p {
                             width: 91px;
-                            height: 23.5px;
 
                             transition: 0.30s ease-in-out;
 
@@ -286,12 +294,14 @@
                             color: gold;
                         }
 
-                    }
+                    
 
                 }
             }
         }
     }
+
+    
 
    
 
