@@ -210,8 +210,6 @@
                 width: 100%;
                 height: 148px;
 
-             
-
             .app__navbar-userbox {
 
                 display: flex;
@@ -221,21 +219,28 @@
                     display: flex;
                     justify-content: center;
 
-                    border: 1px #DDDDDD solid;
+                   border-bottom: 1px solid #DDDDDD;
+                   border-left: 1px solid #DDDDDD;
+                   border-right: 1px solid #DDDDDD;
                 }
 
                 .app__navbar-schedule {
                     display: flex;
                     justify-content: center;
 
-                    border: 1px #DDDDDD solid;
+                    border-bottom: 1px solid #DDDDDD;
+                    border-left: 1px solid #DDDDDD;
+                    border-right: 1px solid #DDDDDD;
+
+                   
                 }
 
                 .app__navbar-cartao {
                     display: flex;
                     justify-content: center;
-
-                    border: 1px #DDDDDD solid;
+                    
+                    border-left: 1px solid #DDDDDD;
+                    border-right: 1px solid #DDDDDD;
                 }
                   
 
