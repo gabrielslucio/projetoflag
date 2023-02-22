@@ -121,3 +121,26 @@
         }
     }
 }
+
+@media screen and (max-width: 320px) {
+    .app__footertop {
+
+        .app__footertop-container {
+            width: 50%;
+            height: 300px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            gap: 100px;
+    
+            .app__footertop-library {
+                display: none;
+            }
+    
+            .app__footertop-howdo {
+               display: none;
+            }
+        }
+    }
+}
