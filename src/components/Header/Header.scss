@@ -1,4 +1,8 @@
 .app__header {
+
+    .app__header-mobile {
+        display: none;
+    }
     
     img {
         object-fit: cover;
@@ -17,6 +21,7 @@
         }
 
         .app__header-mobile {
+            display: flex;
 
             .app__mobile-img {
                 display: flex;
