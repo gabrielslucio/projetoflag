@@ -274,3 +274,20 @@
      }
     
 }
+
+@media screen and (max-width: 320px) {
+    .app__livros {
+             
+        .app__livros-images { 
+            display: none;
+
+            .app__livros-container::-webkit-scrollbar {
+                display: none;
+            }
+        
+            .app__livros-cards {
+                display: none;
+            }
+        }    
+     }
+}
