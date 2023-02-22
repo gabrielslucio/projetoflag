@@ -47,10 +47,35 @@
                 padding-right: 20px;
                 padding-left: 20px;
             }
-            
-    
         }
     }
-   
-     
+}
+
+@media screen and (max-width: 320px) {
+
+    .app__footerbot {
+        .app__foterbot-container {
+            display: none;
+        }
+
+        .app__footer-mobile {
+            height: 100%;
+
+            p {
+                margin-top: 25px;
+
+
+                text-align: center;
+                
+                
+             
+                font-size: 0.8rem;
+            }
+
+            span {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+        }
+    }
 }
