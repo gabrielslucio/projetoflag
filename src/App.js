@@ -12,6 +12,8 @@ import Contatos from './container/Contatos/Contatos';
 import FooterTop from './components/FooterTop/FooterTop';
 import FooterBot from './components/FooterBot/FooterBot';
 
+import RLivros from './container/Reservar Livros/RLivros';
+
 import './App.scss';
 import '../src/styles/Body.scss';
 
@@ -23,6 +25,7 @@ function App() {
     <div className="App">  
       <NavTop />
       <NavBot />   
+
       <Routes>
         
         <Route index path="/" element={ <Header /> } />
@@ -30,6 +33,7 @@ function App() {
         <Route path="/servicos" element={ <Servicos /> } />
         <Route path="/eventos" element={ <Eventos /> } />
         <Route path="/contatos" element={ <Contatos /> } />
+        <Route path="/reserva-livros" element={ <RLivros /> } />
         
         
       </Routes>
