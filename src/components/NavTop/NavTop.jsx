@@ -7,6 +7,7 @@ import images from "../../constants/images";
 
 import './NavTop.scss'
 import books from "../../constants/books";
+import { NavLink } from "react-router-dom";
 
 
 function NavTop() {
@@ -28,10 +29,10 @@ function NavTop() {
             <div className="app__navbar-container">
 
             <div className='app__navbar-logo'>
-                <img src={images.logo} alt='Logo da biblioteca' />
+                <NavLink to={"/"}>
+                    <img src={images.logo} alt='Logo da biblioteca' />
+                </NavLink>
             </div>
-
-
                 <div className="app__navbar-search">
                     <div className="app__navbar-box">
                         <div className="app__navbar-bar">

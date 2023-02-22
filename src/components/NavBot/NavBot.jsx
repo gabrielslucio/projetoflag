@@ -1,5 +1,7 @@
 import React from "react";
 
+import { NavLink } from "react-router-dom";
+
 import '../NavBot/NavBot.scss';
 
 
@@ -9,10 +11,10 @@ const NavBot = () => {
         <nav>
             <div className="app__navbot">
                 <ul className="app__navbot-links">
-                    <li className="app__navbot-livros"><a href='#livros'>Livros</a></li>
-                    <li className="app__navbot-servicos"><a href='#servicos'>Serviços</a></li>
-                    <li className="app__navbot-eventos"><a href='#eventos'>Eventos</a></li>
-                    <li className="app__navbot-contatos"><a href='#contatos'>Contatos</a></li>
+                    <li className="app__navbot-livros"><NavLink to="/livros">Livros</NavLink></li>
+                    <li className="app__navbot-servicos"><NavLink to="/servicos">Serviços</NavLink></li>
+                    <li className="app__navbot-eventos"><NavLink to="/eventos">Eventos</NavLink></li>
+                    <li className="app__navbot-contatos"><NavLink to="/contatos">Contatos</NavLink></li>
                 </ul>
             </div>
         </nav>
