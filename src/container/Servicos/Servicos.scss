@@ -111,4 +111,150 @@
             color: gold;
         }
     }
+
+    .app__servicos-mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .app__servicos {
+        margin: auto;
+        padding: 50px;
+        
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    
+        background: #fff;
+    
+        .app__servicos-container {
+            width: 320px;
+            display: grid;
+            grid-template-columns: 1fr 10em 1fr;
+    
+            row-gap: 50px;
+            
+            .app__servicos-text {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                grid-column: 2;
+    
+                h1 {
+                    font-family: 'Roboto', sans-serif;
+                    color: gold;
+                    font-size: 3rem;
+                    line-height: 83px;
+                    letter-spacing: 0.04em;
+                    text-transform: uppercase;
+                   }
+            }
+    
+            .app__books {
+                display: none;
+            }
+    
+            .app__computers {
+              display: none;
+            }
+    
+            .app__room {
+               display: none;
+            }
+    
+            .app__movies {
+                display: none;
+            }
+    
+            p {
+                display: none;
+               }
+            
+            a {
+                display: none;
+            }
+        }
+
+        .app__servicos-mobile {
+            margin-top: 40px;
+            
+            display: grid;
+
+            .app__mobile-container {
+                display: grid;
+
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+
+                .app__m-books {
+                    grid-column: 1;
+                    grid-row: 1;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;                    
+                }
+
+    
+                .app__m-movies {
+                    grid-column: 3;
+                    grid-row: 3;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center; 
+                }
+
+                .app__m-computers {
+                    grid-column: 1;
+                    grid-row: 3;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center; 
+                }
+
+                .app__m-room {
+                    grid-column: 3;
+                    grid-row: 1;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center; 
+
+                    
+                }
+
+                a {
+                    margin-bottom: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    color: gold;
+                    font-size: 2em;
+
+                    cursor: pointer;
+                }
+
+                p {
+                    text-transform: uppercase;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    font-size: 0.8rem;
+
+
+                }
+            }
+        }
+    }
 }

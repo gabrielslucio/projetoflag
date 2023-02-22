@@ -35,6 +35,31 @@ const Servicos = () => {
                         <p>Requisita um dos nossos filmes</p>
                     </div>
             </div>
+
+            <div className="app__servicos-mobile">
+                <div className="app__mobile-container">
+                    <div className="app__m-books">
+                            <a href="#"><IoBookSharp /></a>
+                            <p>Livros</p>
+                        </div>
+
+                        <div className="app__m-computers">
+                            <a href="#"><RiComputerLine /></a>
+                            <p>Computadores</p>
+                        </div>
+
+                        <div className="app__m-room">
+                            <a href="#"><MdMeetingRoom /></a>
+                            <p>Salas</p>
+                        </div>
+
+                        <div className="app__m-movies">
+                            <a href="#"><MdLocalMovies /></a>
+                            <p>Filmes</p>
+                        </div>
+
+                </div>
+            </div>
         </div>        
     );
 }
