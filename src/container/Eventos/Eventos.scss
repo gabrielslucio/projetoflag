@@ -11,6 +11,13 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+
+        .app__mobile-button {
+            
+            button {
+                display: none;
+            }
+        }
         
 
         button {
@@ -133,4 +140,36 @@
 
        
     }
+}
+
+@media screen and (max-width: 320px) {
+
+    .app__eventos {
+        .app__eventos-container {
+            display: none;
+        }
+
+        .app__eventos-text {
+            display: flex;
+
+            gap: 30px;
+
+
+           .app__mobile-button {
+                button {
+                    display: flex;
+            }
+           }
+
+            h1 {
+                margin: 0;
+                font-size: 3rem;
+            }
+
+            p {
+                display: none;
+            }
+        }
+    }
+   
 }
