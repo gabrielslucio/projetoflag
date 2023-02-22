@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png';
 import logowhite from '../assets/logowhite.png';
 import header from '../assets/header.png';
+import headerMobile from '../assets/header_mobile.png'
 import book01 from '../assets/book01.webp';
 import book02 from '../assets/book02.jpg';
 import book03 from '../assets/book03.webp';
@@ -13,6 +14,7 @@ export default {
     logo,
     logowhite,
     header,
+    headerMobile,
     book01,
     book02,
     book03,

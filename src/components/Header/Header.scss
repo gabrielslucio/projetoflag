@@ -5,4 +5,30 @@
         width: 100%;
         height: 700px;
     }
+
+   
+}
+
+@media screen and (max-width: 320px) {
+    .app__header {
+
+        .app__header-container {
+            display: none;
+        }
+
+        .app__header-mobile {
+
+            .app__mobile-img {
+                display: flex;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 700px;
+                }
+            }
+        }
+    }
+
+    
 }

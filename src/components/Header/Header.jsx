@@ -13,6 +13,12 @@ const Header = () => {
                 </div>
             </div>
 
+            <div className="app__header-mobile">
+                <div className="app__mobile-img">
+                    <img src={images.headerMobile} alt="imagem de uma biblioteca com texto de bem vindo" />
+                </div>
+            </div>
+
         </header>
     );
 }
