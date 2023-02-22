@@ -6,7 +6,7 @@ import './Eventos.scss';
 
 const Eventos = () => {
     return (
-        <div className="app__eventos">
+        <div className="app__eventos" id="app-eventos">
             <div className="app__eventos-container">
                 <div className="app__eventos-imgs">
                     <div className="app__img01">

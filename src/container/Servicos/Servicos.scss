@@ -34,7 +34,6 @@
         }
 
         .app__books {
-            display: grid;
             grid-column: 1;
             grid-row: 3;
             
@@ -46,7 +45,6 @@
         }
 
         .app__computers {
-            display: grid;
             grid-column: 3;
             grid-row: 3;
            
@@ -58,7 +56,6 @@
         }
 
         .app__room {
-            display: grid;
             grid-column: 1;
             grid-row: 2;
             
@@ -69,7 +66,6 @@
         }
 
         .app__movies {
-            display: grid;
             grid-column: 3;
             grid-row: 2;
 

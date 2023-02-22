@@ -9,7 +9,7 @@ import "./Servicos.scss"
 const Servicos = () => {
 
     return (
-        <div className="app__servicos">
+        <div className="app__servicos" id="app-servicos">
             <div className="app__servicos-container">
                 <div className="app__servicos-text">
                     <h1>SERVIÇOS</h1>     

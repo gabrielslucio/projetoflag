@@ -7,7 +7,7 @@ import './Contatos.scss';
 const Contatos = () => {
 
     return (
-        <div className="app__contatos">
+        <div className="app__contatos" id="app-contatos">
             <div className="app__contatos-container">
                 <div className="app__contatos-text">
                     <h1>CONTATOS</h1>

@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { NavLink } from 'react-router-dom';
+
 import {BsArrowLeftShort, BsArrowRightShort} from 'react-icons/bs';
 
 
@@ -23,19 +26,25 @@ const Livros = () => {
     };
 
     return (
-        <div className="app__livros">
+        <div className="app__livros" id="app-livros">
             <div className="app__livros-content">
                 <h1 className="headtext">Livros</h1>
                 <p>Visita a nossa biblioteca e escolha um livro para levar consigo!</p>
-                <button type="button" className="app__livros-button">Reservar</button>
+                
+                <NavLink to={"/rlivros"}>
+                    <button type="button" className="app__livros-button">Reservar</button>
+                </NavLink>
             </div>
 
             <div className="app__livros-images">
                 <div className="app__livros-container" ref={scrollRef}>
                    {[images.book01, images.book02, images.book03, images.book04]
                    .map((image, index) => (
-                     <div className="app__livros-cards" key={`gallery_image-${index + 1}`}> 
-                        <img src={image} alt="imagens dos livros"/>
+                     <div className="app__livros-cards" 
+                        key={`gallery_image-${index + 1}`}> 
+                        <NavLink to={"/rlivros"}>
+                            <img src={image} alt="imagens dos livros"/>
+                        </NavLink>
                      </div>
                    ))}
                 </div>
