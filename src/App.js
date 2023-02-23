@@ -13,6 +13,7 @@ import Contatos from './container/Contatos/Contatos';
 import FooterTop from './components/FooterTop/FooterTop';
 import FooterBot from './components/FooterBot/FooterBot';
 
+import LLivros from './container/Lista Livros/LLivros';
 import RLivros from './container/Reservar Livros/RLivros';
 
 
@@ -44,6 +45,7 @@ function App() {
         <Routes>
           <Route index path="/" element={ <Home /> } />
           <Route path="/rlivros" element= { <RLivros /> } />
+          <Route path="/llivros" element={ <LLivros /> } />
         </Routes>        
       <FooterTop />
       <FooterBot />

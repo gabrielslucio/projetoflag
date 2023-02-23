@@ -7,28 +7,28 @@ const books = [
         genre: "Ficção Científica"
     }, 
     {
-        id: 2,
-        name: "A Brave New World",
-        author: "Aldous Huxley",
-        genre: "Ficção Científica"
-    },
-    {
-        id: 3, 
-        name: "The Catcher in the Rye",
-        author: "J.D.Salinger",
-        genre: "Ficção Juvenil"
-    }, 
-    {
-        id: 4, 
-        name: "To Kill a Mockingbird", 
-        author: "Harper Lee", 
-        genre: "Ficção Gótica"
-    }, 
-    {
-        id: 5, 
+        id: 2, 
         name: "The Great Gatsby", 
         author: "F. Scott Fitzgerald",
         genre: "Literatura Moderna"
+    },
+    {
+        id: 3, 
+        name: "Moby-Dick", 
+        author: "Herman Melville",
+        genre: "Aventura"
+    }, 
+    {
+        id: 4,
+        name: "The Lord of the Rings", 
+        author: "J.R.R. Tolkien", 
+        genre: "Fantasia"
+    }, 
+    {
+        id: 5, 
+        name: "To Kill a Mockingbird", 
+        author: "Harper Lee", 
+        genre: "Ficção Gótica"
     }, 
     {
         id: 6,
@@ -38,9 +38,9 @@ const books = [
     }, 
     {
         id: 7, 
-        name: "Moby-Dick", 
-        author: "Herman Melville",
-        genre: "Aventura"
+        name: "The Catcher in the Rye",
+        author: "J.D.Salinger",
+        genre: "Ficção Juvenil"
     }, 
     {
         id: 8, 
@@ -68,9 +68,9 @@ const books = [
     }, 
     {
         id: 12,
-        name: "The Lord of the Rings", 
-        author: "J.R.R. Tolkien", 
-        genre: "Fantasia"
+        name: "A Brave New World",
+        author: "Aldous Huxley",
+        genre: "Ficção Científica"
     },
     {
         id: 13, 

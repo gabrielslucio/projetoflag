@@ -1,0 +1,33 @@
+.app__rlivros {
+    width: 100%;
+    height: 900px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        color: gold;
+        font-size: 64px;
+        line-height: 83px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+       }
+
+       button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+       }
+
+       .on {
+        color: gold;
+       }
+
+       .off {
+        color: #fff;
+       }
+
+}
