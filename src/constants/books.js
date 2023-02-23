@@ -50,9 +50,9 @@ const books = [
     }, 
     {
         id: 9,
-        name: "The Diary of a Young Girl", 
-        author: "Anne Frank",
-        genre: "Biografia"
+        name: "The Lord of the Rings: The Two Towers", 
+        author: "J.R.R. Tolkien",
+        genre: "Fantasia"
     }, 
     {
         id: 10,

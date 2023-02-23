@@ -8,7 +8,7 @@ import images  from '../../constants/images';
 
 function LLivros() {
 
-    const selectedBooks = books.slice(0, 4);
+    const selectedBooks = books.slice(0, 10);
 
     return (
 
