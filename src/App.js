@@ -1,15 +1,10 @@
 import React from 'react';
 
-import {BrowserRouter, Route, Routes, Switch} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 
 import NavTop from './components/NavTop/NavTop';
-import NavBot from './components/NavBot/NavBot';
-import Header from './components/Header/Header';
-import Livros from './container/Livros/Livros';
-import Servicos from './container/Servicos/Servicos';
-import Eventos from './container/Eventos/Eventos';
-import Contatos from './container/Contatos/Contatos';
+import Home from './Pages/Home';
 import FooterTop from './components/FooterTop/FooterTop';
 import FooterBot from './components/FooterBot/FooterBot';
 
@@ -22,17 +17,7 @@ import './App.scss';
 import '../src/styles/Body.scss';
 import ScrollToTop from './Router/ScrollToTop/ScrollToTop';
 
-function Home() {
-  return (
-    <>    
-    <Header />
-    <Livros />
-    <Servicos />
-    <Eventos />
-    <Contatos />    
-    </>
-  );
-}
+
 
 
 function App() {
@@ -40,7 +25,6 @@ function App() {
     <BrowserRouter>
     <div className="App">  
       <NavTop />
-      <NavBot />  
       <ScrollToTop>   
           <Routes>
             <Route index path="/" element={ <Home /> } />
