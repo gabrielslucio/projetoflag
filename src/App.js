@@ -20,10 +20,10 @@ import RLivros from './container/Reservar Livros/RLivros';
 
 import './App.scss';
 import '../src/styles/Body.scss';
+import ScrollToTop from './Router/ScrollToTop/ScrollToTop';
 
 function Home() {
   return (
-
     <>    
     <Header />
     <Livros />
@@ -31,7 +31,6 @@ function Home() {
     <Eventos />
     <Contatos />    
     </>
-
   );
 }
 
@@ -41,12 +40,14 @@ function App() {
     <BrowserRouter>
     <div className="App">  
       <NavTop />
-      <NavBot />         
-        <Routes>
-          <Route index path="/" element={ <Home /> } />
-          <Route path="/rlivros" element= { <RLivros /> } />
-          <Route path="/llivros" element={ <LLivros /> } />
-        </Routes>        
+      <NavBot />  
+      <ScrollToTop>   
+          <Routes>
+            <Route index path="/" element={ <Home /> } />
+            <Route path="/rlivros" element= { <RLivros /> } />
+            <Route path="/llivros" element={ <LLivros /> } />
+          </Routes>   
+        </ScrollToTop>         
       <FooterTop />
       <FooterBot />
 
