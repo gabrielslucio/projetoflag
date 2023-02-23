@@ -21,21 +21,19 @@ function LLivros() {
                 </div>
 
                 <div className="app__llivros-list">
-
                     <ul>
                         {selectedBooks.map((book) => 
-                        <li key={book.id}>
-                            <h2>Nome: {book.name}</h2>
+                        <li 
+                            className={"app__llivros-item" + book.id}
+                            key={book.id}>
+                            <h2>{book.name}</h2>
                             <img src={images[`book${book.id.toString().padStart(2, "0")}`]} alt={`Imagem do livro ${book.name}`} />
-                            <p>Autor: {book.author}</p>
-                            <p>Género: {book.genre}</p>
+                            <p><span>Autor:</span> {book.author}</p>
+                            <p><span>Género:</span> {book.genre}</p>
+                            <button type="submit">Reservar</button>
                         </li>)}
                     </ul>
-
                 </div>
-
-
-
             </div>
         </div>
     )

@@ -1,0 +1,149 @@
+.app__llivros {
+    margin: 20px; 
+    padding: 20px;
+    .app__llivros-header {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+        
+        h1 {
+            font-family: 'Roboto', sans-serif;
+            color: gold;
+            font-size: 64px;
+            line-height: 83px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+           }
+    }
+
+    .app__llivros-container {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr;
+
+        justify-items: center;
+        align-items: center;
+
+        .app__llivros-list {
+            width: 100%;
+
+           ul {
+            margin: 20px;
+            padding: 20px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+
+            gap: 50px;
+
+
+
+            .app__llivros-item1 {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                gap: 20px;
+            }
+
+            .app__llivros-item2 {
+                
+                grid-column: 2;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                gap: 20px;
+
+
+            }
+
+            .app__llivros-item3 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                gap: 20px;
+            }
+
+            .app__llivros-item4 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                gap: 20px;
+            }
+           }
+
+            
+        }
+
+    }
+
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-size: 35px;
+        line-height: 83px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: capitalize;
+        line-height: 29px;
+        font-size: 23px;
+
+        span {
+            color: gold;
+        }
+       }
+
+    button {
+        margin-top: 1rem;
+
+        color: #000;
+        background-color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        line-height: 28px;
+        font-size: 16px;
+        padding: 0.5rem 1.5rem;
+        border-radius: 20px;
+        border: 1px solid #fff;
+        outline: none; 
+        transition: 0.20s ease-in-out;
+        
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: gold;
+        background: transparent;
+        border-color: gold;
+    }
+
+    img {
+        width: 300px;
+        height: 528px;
+    }
+
+    
+
+}
