@@ -9,7 +9,7 @@
     align-items: center;
     
 
-    background: #fff;
+    background-color: #fff;
 
     .app__servicos-container {
         display: grid;
@@ -93,7 +93,7 @@
             width: 80px;
 
             font-size: 3rem;
-            background: gold;
+            background-color: gold;
             color: #fff;
             border: 2px solid gold;
             border-radius: 50px;
@@ -103,7 +103,7 @@
 
         a:hover {
             width: 30%;
-            background: #fff;
+            background-color: #fff;
             color: gold;
         }
     }
@@ -247,8 +247,6 @@
                     font-family: 'Roboto', sans-serif;
                     font-weight: 500;
                     font-size: 0.8rem;
-
-
                 }
             }
         }

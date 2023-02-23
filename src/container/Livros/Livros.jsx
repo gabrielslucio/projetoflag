@@ -31,7 +31,7 @@ const Livros = () => {
                 <h1 className="headtext">Livros</h1>
                 <p>Visita a nossa biblioteca e escolha um livro para levar consigo!</p>
                 
-                <NavLink to={"/rlivros"}>
+                <NavLink className="app__livros-button" to={"/llivros"}>
                     <button type="button" className="app__livros-button">Reservar</button>
                 </NavLink>
             </div>
