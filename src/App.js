@@ -2,16 +2,13 @@ import React from 'react';
 
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-
 import NavTop from './components/NavTop/NavTop';
-import Home from './Pages/Home';
+import Home from './Pages/Home/Home';
 import FooterTop from './components/FooterTop/FooterTop';
 import FooterBot from './components/FooterBot/FooterBot';
 
-import LLivros from './container/Lista Livros/LLivros';
-import RLivros from './container/Reservar Livros/RLivros';
-
-
+import LLivros from './Pages/Lista Livros/LLivros';
+import RLivros from './Pages/Reservar Livros/RLivros';
 
 import './App.scss';
 import '../src/styles/Body.scss';
@@ -51,7 +48,7 @@ function App() {
         </Routes>
 
     */}
-    
+     
     </div>
     </BrowserRouter>
   );
