@@ -1,5 +1,7 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
+
+import { useNavigate } from "react-router-dom";
+
 
 
 import './LLivros.scss';
@@ -14,7 +16,7 @@ function LLivros() {
     const selectedBooks = books.slice(0, 10);
 
     const handleReserveClick = (book) => {
-        navigate(`/book/${book.id}`);
+        navigate(`/livro/${book.id}`);
     };
 
     return (

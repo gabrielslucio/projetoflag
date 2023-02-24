@@ -7,8 +7,8 @@ import Home from './Pages/Home/Home';
 import FooterTop from './components/FooterTop/FooterTop';
 import FooterBot from './components/FooterBot/FooterBot';
 
-import LLivros from './Pages/Lista Livros/LLivros';
-import RLivros from './Pages/Reservar Livros/RLivros';
+import LLivros from './Pages/ListaLivros/LLivros';
+import RLivros from './Pages/ReservarLivros/RLivros';
 
 import './App.scss';
 import '../src/styles/Body.scss';
@@ -25,8 +25,8 @@ function App() {
       <ScrollToTop>   
           <Routes>
             <Route index path="/" element={ <Home /> } />
-            <Route path="/rlivros" element= { <RLivros /> } />
             <Route path="/llivros" element={ <LLivros /> } />
+            <Route exact path="/livro/:id" element= { <RLivros/> } />
           </Routes>   
         </ScrollToTop>         
       <FooterTop />

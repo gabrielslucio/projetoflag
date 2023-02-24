@@ -1,33 +1,47 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import {AiFillStar} from "react-icons/ai";
 
 import images from "../../constants/images";
+import books from "../../constants/books";
 
-import {AiFillStar} from "react-icons/ai";
+
 
 import './RLivros.scss'
 
-const RLivros = () => {
-
+const RLivros = ({ match }) => {
+    
+    const { id } = useParams();
+    const [book, setBook] = useState(null);  
     const [rating, setRating] = useState(0);
-
     const [hover, setHover] = useState(0);
+
+    useEffect(() => {
+        const bookData = books.find((book) => book.id === Number(id));
+        setBook(bookData);
+    }, [id]);
+
+    if (!book) {
+        return <div>Loading...</div>
+    }
 
     return (
 
         <div className="app__rlivros">
             <div className="app__rlivros-container">
                 <div className="app__rlivros-head">
-                    <h1>Reservar Livro</h1>
+                    <h1>{book.name}</h1>
                 </div>
 
                 <div className="app__rlivros-livros">
-                    <h2>O Senhor dos Anéis</h2>
-                    <img src={images.book04} />
+                    <h2>{book.author}</h2>
+                    <img 
+                    src={images[`book${book.id.toString().padStart(2, '0')}`]}
+                    alt={`Imagem do livro ${book.name}`}
+                    />
                     <h3>Sinopse</h3>
                     <p> 
-                        Desde a sua publicação, em 1954-1955, o relato da viagem de Frodo pela Terra Média, tem encantado poetas e académicos, crianças e adultos.
-                        É uma obra--prima da fantasia, épica e íntima ao mesmo tempo, familiar por vezes, inquietante noutras e a sua voz atravessou os séculos.
+                        {book.description}
                     </p>
                 </div>
 
