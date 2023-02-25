@@ -17,13 +17,18 @@ const RLivros = () => {
 
   const [showModal, setShowModal] = useState(false);
 
+
+
   const handleReservarClick = () => {
     setShowModal(true);
+
   };
 
   const handleModalClose = () => {
     setShowModal(false);
   };
+
+ 
 
   const ReservationModal = () => {
     const [name, setName] = useState('');
@@ -42,7 +47,23 @@ const RLivros = () => {
         if (!address) setAddressError(true);
       }
 
-      handleModalClose();
+      if (name && email && address) {
+        const reservationData = {
+          name,
+          email,
+          address,
+          bookName: book.name,
+          timestamp: new Date().getTime(),
+        };
+
+        const reservations = JSON.parse(localStorage.getItem('reservations') || '[]');
+        localStorage.setItem('reservations', JSON.stringify([...reservations, reservationData]));
+      
+        
+        handleModalClose(); 
+      }
+
+      
     };
 
     const handleModalClose = () => {
@@ -54,30 +75,38 @@ const RLivros = () => {
       setAddressError(false);
       setShowModal(false);
     };
+    
 
-    return (
-      <div className="app__rlivros-modal">
-        <div className="app__rlivros-mcontent">
-          <h2>Reserve o livro {book.name}</h2>
-          <form onSubmit={handleFormSubmit}>
-            <label>
-              Nome:
-              <input type="text" value={name} onChange={(event) => setName(event.target.value)} required />
-            </label>
-            <label>
-              Email:
-              <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
-            </label>
-            <label>
-              Endereço:
-              <input type="text" value={address} onChange={(event) => setAddress(event.target.value)} required />
-            </label>
-            <button type="submit">Reservar</button>
-          </form>
-          <button onClick={handleModalClose}>Fechar</button>
+      return (
+        <div>
+          {showModal && (
+          <div className="app__rlivros-modal">
+            <div className="app__rlivros-mcontent">
+              <h2>Reserve o livro {book.name}</h2>
+              <form onSubmit={handleFormSubmit}>
+                <label>
+                  Nome:
+                  <input type="text" value={name} onChange={(event) => setName(event.target.value)} required />
+                </label>
+                <label>
+                  Email:
+                  <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
+                </label>
+                <label>
+                  Endereço:
+                  <input type="text" value={address} onChange={(event) => setAddress(event.target.value)} required />
+                </label>
+                <button type="submit">
+                      Reservar</button>
+                  
+              </form> 
+              <button onClick={handleModalClose}>Fechar</button>
+            </div>
+          </div>
+          )}
         </div>
-      </div>
-    );
+      );
+    
   };
 
 
