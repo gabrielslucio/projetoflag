@@ -8,11 +8,77 @@ import './RLivros.scss';
 
 
 
+
 const RLivros = () => {
   const { id } = useParams();
   const [book, setBook] = useState(null);
   const [hover, setHover] = useState(0);
   const [comments, setComments] = useState([]);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleReservarClick = () => {
+    setShowModal(true);
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+  };
+
+  const ReservationModal = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [address, setAddress] = useState('');
+    const [nameError, setNameError] = useState(false);
+    const [emailError, setEmailError] = useState(false);
+    const [addressError, setAddressError] = useState(false);
+
+    const handleFormSubmit = (event) => {
+      event.preventDefault();
+
+      if (!name || !email || !address) {
+        if (!name) setNameError(true);
+        if (!email) setEmailError(true);
+        if (!address) setAddressError(true);
+      }
+
+      handleModalClose();
+    };
+
+    const handleModalClose = () => {
+      setName('');
+      setEmail('');
+      setAddress('');
+      setNameError(false);
+      setEmailError(false);
+      setAddressError(false);
+      setShowModal(false);
+    };
+
+    return (
+      <div className="app__rlivros-modal">
+        <div className="app__rlivros-mcontent">
+          <h2>Reserve o livro {book.name}</h2>
+          <form onSubmit={handleFormSubmit}>
+            <label>
+              Nome:
+              <input type="text" value={name} onChange={(event) => setName(event.target.value)} required />
+            </label>
+            <label>
+              Email:
+              <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
+            </label>
+            <label>
+              Endereço:
+              <input type="text" value={address} onChange={(event) => setAddress(event.target.value)} required />
+            </label>
+            <button type="submit">Reservar</button>
+          </form>
+          <button onClick={handleModalClose}>Fechar</button>
+        </div>
+      </div>
+    );
+  };
 
 
   useEffect(() => {
@@ -49,6 +115,8 @@ const RLivros = () => {
   if (!book) {
     return <div>Erro</div>;
   }
+
+  
 
   const handleCommentSubmit = (comment) => {
     const updatedComments = [...comments, comment];
@@ -91,6 +159,9 @@ const RLivros = () => {
       </div>
     );
   };
+
+  
+
   
 
   return (
@@ -132,7 +203,7 @@ const RLivros = () => {
         </div>
 
         <div className="app__rlivros-rbtn">
-          <button type="button">Reservar</button>
+          <button type="button" onClick={handleReservarClick}>Reservar</button>
         </div>
       </div>
 
@@ -147,6 +218,8 @@ const RLivros = () => {
               
             ))}
         </div>
+
+        {showModal && <ReservationModal />}
     </div>
   );
 };
