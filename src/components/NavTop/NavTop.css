@@ -32,7 +32,6 @@
   align-items: right;
 }
 .app__navbar .app__navbar-search .app__navbar-results table {
-  z-index: 10;
   margin: auto;
   height: 40px;
   width: 100%;
@@ -148,35 +147,42 @@
 }
 .app__navbar .app__navbar-container {
   display: flex;
-  justify-content: center;
-  width: 1109px;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
   height: 148px;
 }
 .app__navbar .app__navbar-container .app__navbar-userbox {
-  position: absolute;
-  width: 239px;
-  height: 148px;
-  right: 0px;
-  top: 0px;
-}
-.app__navbar .app__navbar-container .app__navbar-userbox ul .app__navbbar-user {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px 53px 1px 1px;
+  justify-content: right;
 }
-.app__navbar .app__navbar-container .app__navbar-userbox ul li {
-  padding-left: 15px;
+.app__navbar .app__navbar-container .app__navbar-userbox .app__navbar-account {
   display: flex;
-  align-items: center;
-  justify-content: left;
-  width: 240px;
+  justify-content: center;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox .app__navbar-schedule {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox .app__navbar-cartao {
+  display: flex;
+  justify-content: center;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+}
+.app__navbar .app__navbar-container .app__navbar-userbox li {
+  width: 100%;
   height: 49px;
-  border-width: 0px 0px 1px 1px;
-  border-style: solid;
-  border-color: #DDDDDD;
 }
-.app__navbar .app__navbar-container .app__navbar-userbox ul a {
+.app__navbar .app__navbar-container .app__navbar-userbox a {
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -188,26 +194,86 @@
   color: #373737;
   font-family: "Robot", sans-serif;
 }
-.app__navbar .app__navbar-container .app__navbar-userbox ul a p {
+.app__navbar .app__navbar-container .app__navbar-userbox a p {
   width: 91px;
-  height: 23.5px;
   transition: 0.3s ease-in-out;
 }
-.app__navbar .app__navbar-container .app__navbar-userbox ul a p:hover {
+.app__navbar .app__navbar-container .app__navbar-userbox a p:hover {
   color: gold;
 }
-.app__navbar .app__navbar-container .app__navbar-userbox ul a .user {
+.app__navbar .app__navbar-container .app__navbar-userbox a .user {
   width: 16px;
   height: 16px;
   color: gold;
 }
-.app__navbar .app__navbar-container .app__navbar-userbox ul a .clock {
+.app__navbar .app__navbar-container .app__navbar-userbox a .clock {
   width: 16px;
   height: 16px;
   color: gold;
 }
-.app__navbar .app__navbar-container .app__navbar-userbox ul a .card {
+.app__navbar .app__navbar-container .app__navbar-userbox a .card {
   width: 16px;
   height: 16px;
   color: gold;
+}
+.app__navbar .app__navbar-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .app__navbar {
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .app__navbar .app__navbar-logo {
+    display: none;
+  }
+  .app__navbar .app__navbar-search {
+    display: none;
+  }
+  .app__navbar .app__navbar-dropdown {
+    display: none;
+  }
+  .app__navbar .app__navbar-container {
+    display: none;
+  }
+  .app__navbar .app__navbar-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .app__navbar .app__navbar-mobile .user-mobile {
+    color: gold;
+    font-size: 1.5rem;
+    border: 1px solid gold;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .app__navbar .app__navbar-mobile .user-mobile:hover {
+    background: gold;
+    color: #fff;
+  }
+  .app__navbar .app__navbar-mobile .clock-mobile {
+    color: gold;
+    font-size: 1.5rem;
+    border: 1px solid gold;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .app__navbar .app__navbar-mobile .clock-mobile:hover {
+    background: gold;
+    color: #fff;
+  }
+  .app__navbar .app__navbar-mobile .card-mobile {
+    color: gold;
+    font-size: 1.5rem;
+    border: 1px solid gold;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  .app__navbar .app__navbar-mobile .card-mobile:hover {
+    background: gold;
+    color: #fff;
+  }
 }/*# sourceMappingURL=NavTop.css.map */

@@ -1,37 +1,16 @@
 .app__navbot {
-  padding: 0px 501px 8px 0px;
   width: 100%;
   height: 65px;
+  border-bottom: 1px solid rgba(55, 55, 55, 0.6);
   background: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .app__navbot .app__navbot-links {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 30px;
-}
-.app__navbot .app__navbot-links .app__navbot-livros {
-  display: flex;
-  flex-direction: row;
-  padding: 19px 17px 13px 24px;
-}
-.app__navbot .app__navbot-links .app__navbot-servicos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 19px 17px 13px 24px;
-}
-.app__navbot .app__navbot-links .app__navbot-eventos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 19px 17px 13px 24px;
-}
-.app__navbot .app__navbot-links .app__navbot-contatos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 19px 17px 13px 24px;
+  justify-content: space-around;
 }
 .app__navbot .app__navbot-links a {
   letter-spacing: 0.64px;
@@ -55,4 +34,21 @@
   width: 3%;
   height: 2px;
   background: gold;
+}
+
+@media only screen and (max-width: 768px) {
+  .app__navbot {
+    width: 100%;
+  }
+  .app__navbot .app__navbot-links a {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .app__navbot {
+    width: 100%;
+  }
+  .app__navbot .app__navbot-links a {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=NavBot.css.map */
