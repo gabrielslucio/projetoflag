@@ -11,7 +11,6 @@ import './RLivros.scss';
 const RLivros = () => {
   const { id } = useParams();
   const [book, setBook] = useState(null);
-  const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
   const [comments, setComments] = useState([]);
 
@@ -37,6 +36,15 @@ const RLivros = () => {
   useEffect(() => {
     localStorage.setItem(`book-${id}-comments`, JSON.stringify(comments));
   }, [comments, id]);
+
+  const [rating, setRating] = useState(() => {
+    const storedRating = localStorage.getItem(`book_${id}_rating`);
+    return storedRating ? parseInt(storedRating) : 0;
+  });
+
+  useEffect(() => {
+    localStorage.setItem(`book_${id}_rating`, rating);
+  }, [id, rating]);
 
   if (!book) {
     return <div>Erro</div>;
