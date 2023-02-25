@@ -75,9 +75,10 @@ const RLivros = () => {
             className="app__rlivros-cform"
             onSubmit={handleSubmit}>
           <label className="app__rlivros-label">
-            Adiciona um comentário:
+            <h4>Adiciona um comentário:</h4>
             <textarea
                 className="app__rlivros-textarea" 
+                maxLength="50"
                 value={comment} 
                 onChange={handleCommentChange} 
             />
@@ -128,15 +129,22 @@ const RLivros = () => {
               );
             })}
           </div>
+        </div>
 
-          <div className="app__rlivros-comments">
+        
+      </div>
+
+      <div className="app__rlivros-comments">
             <CommentBox onSubmit={handleCommentSubmit} />
             {comments.map((comment, index) => (
-              <p key={index}>{comment}</p>
+                <div className="app__rlivros-cc">
+                    <div className="app__rlivros-container">
+                        <p key={index}>{comment}</p> 
+                    </div>
+                </div>
+              
             ))}
-          </div>
         </div>
-      </div>
     </div>
   );
 };
