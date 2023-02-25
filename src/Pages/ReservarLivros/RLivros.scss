@@ -1,19 +1,74 @@
 .app__rlivros {
     width: 100%;
-    height: 900px;
+    height: 1000px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    h1 {
-        font-family: 'Roboto', sans-serif;
-        color: gold;
-        font-size: 64px;
-        line-height: 83px;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-       }
+    .app__rlivros-container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .app__rlivros-head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+            margin: auto;
+            padding: 20px;
+
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                color: gold;
+                font-size: 4rem;
+                line-height: 83px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+               }
+        }
+
+        .app__rlivros-livros {
+            width: 60%;
+
+            margin: 20px;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 20px;
+
+
+            h2 {
+                font-family: 'Roboto', sans-serif;
+                color: #fff;
+                font-size: 2.5rem;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+            }
+
+            h3 {
+                font-family: 'Roboto', sans-serif;
+                color: gold;
+                font-size: 2rem;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                color: #fff;
+                font-size: 1.2rem;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+
+   
 
        button {
         background-color: transparent;

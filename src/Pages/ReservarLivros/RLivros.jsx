@@ -49,7 +49,6 @@ const RLivros = () => {
   if (!book) {
     return <div>Erro</div>;
   }
-  
 
   const handleCommentSubmit = (comment) => {
     const updatedComments = [...comments, comment];
@@ -80,7 +79,8 @@ const RLivros = () => {
             <textarea
                 className="app__rlivros-textarea" 
                 value={comment} 
-                onChange={handleCommentChange} />
+                onChange={handleCommentChange} 
+            />
           </label>
             <button
                 className="app__rlivros-bform"
@@ -105,7 +105,7 @@ const RLivros = () => {
             src={images[`book${book.id.toString().padStart(2, '0')}`]}
             alt={`Imagem do livro ${book.name}`}
           />
-          <h3>Synopsis</h3>
+          <h3>Descrição</h3>
           <p>{book.description}</p>
         </div>
 
@@ -132,7 +132,7 @@ const RLivros = () => {
           <div className="app__rlivros-comments">
             <CommentBox onSubmit={handleCommentSubmit} />
             {comments.map((comment, index) => (
-              <div key={index}>{comment}</div>
+              <p key={index}>{comment}</p>
             ))}
           </div>
         </div>
