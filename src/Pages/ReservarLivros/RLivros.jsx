@@ -4,6 +4,10 @@ import { AiFillStar } from 'react-icons/ai';
 import books from '../../constants/books';
 import images from '../../constants/images';
 
+import './RLivros.scss';
+
+
+
 const RLivros = () => {
   const { id } = useParams();
   const [book, setBook] = useState(null);
@@ -27,7 +31,7 @@ const RLivros = () => {
     if (storedComments) {
         setComments(storedComments);
     }
-  })
+  }, [id]);
 
 
   useEffect(() => {
@@ -47,29 +51,38 @@ const RLivros = () => {
 
   const CommentBox = ({ onSubmit }) => {
     const [comment, setComment] = useState('');
-
+  
     const handleCommentChange = (event) => {
       setComment(event.target.value);
     };
-
+  
     const handleSubmit = (event) => {
       event.preventDefault();
       onSubmit(comment);
       setComment('');
     };
-
+  
     return (
-      <div>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Add a comment:
-            <textarea value={comment} onChange={handleCommentChange} />
+      <div className="app__rlivros-comment">
+        <form 
+            className="app__rlivros-cform"
+            onSubmit={handleSubmit}>
+          <label className="app__rlivros-label">
+            Adiciona um comentário:
+            <textarea
+                className="app__rlivros-textarea" 
+                value={comment} 
+                onChange={handleCommentChange} />
           </label>
-          <button type="submit">Submit</button>
+            <button
+                className="app__rlivros-bform"
+                type="submit">Comenta
+            </button>
         </form>
       </div>
     );
   };
+  
 
   return (
     <div className="app__rlivros">
@@ -95,7 +108,7 @@ const RLivros = () => {
                 <button
                   type="button"
                   key={index}
-                  className={index <= rating ? 'on' : 'off'}
+                  className={index <= rating || index <= hover ? 'on' : 'off'}
                   onClick={() => setRating(index)}
                   onMouseEnter={() => setHover(index)}
                   onMouseLeave={() => setHover(rating)}
