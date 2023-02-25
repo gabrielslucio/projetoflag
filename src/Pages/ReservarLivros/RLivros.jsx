@@ -131,7 +131,9 @@ const RLivros = () => {
           </div>
         </div>
 
-        
+        <div className="app__rlivros-rbtn">
+          <button type="button">Reservar</button>
+        </div>
       </div>
 
       <div className="app__rlivros-comments">
