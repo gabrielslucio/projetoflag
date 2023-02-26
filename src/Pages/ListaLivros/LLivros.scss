@@ -210,3 +210,76 @@
         align-items: center;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .app__llivros {
+        overflow: hidden;
+
+        width: 70%;
+
+        .app__llivros-header {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+              
+              h1 {
+                text-align: center;
+                  font-family: 'Roboto', sans-serif;
+                  color: gold;
+                  font-size: 2rem;
+                  line-height: 83px;
+                  letter-spacing: 0.04em;
+                  text-transform: uppercase;
+                 }
+          }
+
+        .app__llivros-container {
+            
+
+            .app__llivros-list {
+                width: 100%;
+                display: grid;
+
+                ul {
+                    width: 224px;
+
+                    margin: 20px 20px 0 0;
+                    padding: 20px;
+
+                    display: grid;
+
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr 1fr;
+
+                    justify-content: left;
+
+                    gap: 20px;
+                }
+            }
+        }
+
+        h2 {
+            margin-right: 40px;
+            margin-top: 50px;
+            font-size: 1rem;
+        }
+    
+        p {
+            margin-right: 40px;
+            font-size: 1rem;
+
+           }
+
+        img {
+            width: 280px;
+            height: 528px;
+        }
+
+        button {
+            margin-top: 1rem;
+            margin-right: 23px;
+        }
+    }
+
+}
