@@ -135,9 +135,6 @@
                     outline: none;
                     border: 1px solid gold;
                     border-radius: 25px;
-
-                    
-
                 }
                 
 
@@ -145,6 +142,7 @@
                     border: 1px solid gold;
                     border-radius: 5px;
                     resize: none;
+                    outline: none;
                 }
             }
 
@@ -312,11 +310,32 @@
     
                
             }
+
+            .app__cmodal {
+
+                form {
+                    width: 319px;
+                }
+           
+
+                .app__cmbtn {
+
+                    .app__sbtn {
+    
+                        width: 50%;
+                    }
+                    
+                }
+            }
         }
 
         .app__contatos-maps {
             display: none;
+
+            
         }
+
+        
     }
     
 

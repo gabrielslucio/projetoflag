@@ -17,11 +17,8 @@ const RLivros = () => {
 
   const [showModal, setShowModal] = useState(false);
 
-
-
   const handleReservarClick = () => {
     setShowModal(true);
-
   };
 
   const handleModalClose = () => {
@@ -57,6 +54,7 @@ const RLivros = () => {
         };
 
         const reservations = JSON.parse(localStorage.getItem('reservations') || '[]');
+
         localStorage.setItem('reservations', JSON.stringify([...reservations, reservationData]));
       
         
@@ -112,8 +110,7 @@ const RLivros = () => {
                     onChange={(event) => setAddress(event.target.value)} 
                     required 
                   />
-                </label>
-                
+                </label>                
                 <div className="app__btnm">  
                   <button type="submit">Reservar</button>
                 </div>
@@ -125,8 +122,7 @@ const RLivros = () => {
           </div>
           )}
         </div>
-      );
-    
+      );    
   };
 
 
@@ -164,8 +160,6 @@ const RLivros = () => {
   if (!book) {
     return <div>Erro</div>;
   }
-
-  
 
   const handleCommentSubmit = (comment) => {
     const updatedComments = [...comments, comment];
@@ -210,9 +204,6 @@ const RLivros = () => {
     );
   };
 
-  
-
-  
 
   return (
     <div className="app__rlivros">
