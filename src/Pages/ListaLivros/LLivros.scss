@@ -199,3 +199,14 @@
     
 
 }
+
+@media screen and (max-width: 768px) {
+    .app__llivros {
+        width: 90%;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
