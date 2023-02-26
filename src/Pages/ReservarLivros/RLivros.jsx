@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { AiFillStar } from 'react-icons/ai';
+import { AiFillStar, AiOutlineClose } from 'react-icons/ai';
 import books from '../../constants/books';
 import images from '../../constants/images';
 
@@ -96,11 +96,23 @@ const RLivros = () => {
                   Endereço:
                   <input type="text" value={address} onChange={(event) => setAddress(event.target.value)} required />
                 </label>
-                <button type="submit">
+                
+                <div className="app__btnm"> 
+                
+                
+                <button 
+                
+                type="submit">
                       Reservar</button>
+                </div>
+                
+                
+                
                   
               </form> 
-              <button onClick={handleModalClose}>Fechar</button>
+              <div className="app__mx">
+              <button onClick={handleModalClose}><AiOutlineClose /></button>
+              </div>
             </div>
           </div>
           )}
@@ -178,6 +190,7 @@ const RLivros = () => {
                 maxLength="50"
                 value={comment} 
                 onChange={handleCommentChange} 
+                required
             />
           </label>
             <button
