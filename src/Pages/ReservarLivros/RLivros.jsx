@@ -86,29 +86,37 @@ const RLivros = () => {
               <form onSubmit={handleFormSubmit}>
                 <label>
                   Nome:
-                  <input type="text" value={name} onChange={(event) => setName(event.target.value)} required />
+                  <input 
+                    id="nome"
+                    name="nome"
+                    type="text" 
+                    value={name} onChange={(event) => setName(event.target.value)} 
+                    required />
                 </label>
                 <label>
                   Email:
-                  <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
+                  <input 
+                    id="email"
+                    name="email"
+                    type="email" value={email} onChange={(event) => 
+                    setEmail(event.target.value)} 
+                    required
+                  />
                 </label>
                 <label>
                   Endereço:
-                  <input type="text" value={address} onChange={(event) => setAddress(event.target.value)} required />
+                  <input 
+                    id="endereco"
+                    name="endereco"
+                    type="text" value={address} 
+                    onChange={(event) => setAddress(event.target.value)} 
+                    required 
+                  />
                 </label>
                 
-                <div className="app__btnm"> 
-                
-                
-                <button 
-                
-                type="submit">
-                      Reservar</button>
+                <div className="app__btnm">  
+                  <button type="submit">Reservar</button>
                 </div>
-                
-                
-                
-                  
               </form> 
               <div className="app__mx">
               <button onClick={handleModalClose}><AiOutlineClose /></button>

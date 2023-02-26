@@ -1,10 +1,41 @@
-import React from "react";
+import React, {useState} from "react";
+
+import { AiOutlineClose } from "react-icons/ai";
 
 import {MdOutlineEmail} from "react-icons/md";
 
 import './Contatos.scss';
 
 const Contatos = () => {
+
+    const [showModal, setShowModal] = useState(false);
+    const [paraValue, setParaValue] = useState("");
+    const [sujeitoValue, setSujeitoValue] = useState("");
+    const [mensagemValue, setMensagemValue] = useState("");
+
+    const toggleModal = () => {
+        setShowModal(!showModal);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const email = {
+            para: paraValue,
+            sujeito: sujeitoValue,
+            mensagem: mensagemValue
+        };
+        
+        const emails = JSON.parse(localStorage.getItem('emails')) || [];
+
+        emails.push(email);
+
+        localStorage.setItem('emails', JSON.stringify(emails));
+        
+        toggleModal();        
+        setParaValue("");
+        setSujeitoValue("");
+        setMensagemValue("");
+    }
 
     return (
         <div className="app__contatos" id="app-contatos">
@@ -23,8 +54,46 @@ const Contatos = () => {
                         </ul>
                     </div>
                     <div className="app__contatos-btn">
-                        <button type="submit"><MdOutlineEmail /></button>
+                        <button type="button" onClick={toggleModal}><MdOutlineEmail /></button>
                     </div>
+                    {showModal && (
+                <div className="app__cmodal">
+                    <form onSubmit={handleSubmit}>
+                        <h2>Envie um email</h2>
+                        <label htmlFor="to">Para:</label>
+                        <input 
+                            type="email"
+                            id="para"
+                            name="para"
+                            placeholder="biblioteca@gmail.com"
+                            value={paraValue}
+                            onChange={(e) => setParaValue(e.target.value)}
+                        />
+                        <label htmlFor="sujeito">Sujeito:</label>
+                        <input
+                            type="email"
+                            id="sujeito"
+                            name="sujeito"
+                            value={sujeitoValue}
+                            onChange={(e) => setSujeitoValue(e.target.value)}
+                            required
+                        />
+                        <label htmlFor="message">Mensagem:</label>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            value={mensagemValue}
+                            onChange={(e) => setMensagemValue(e.target.value)}
+                            required
+                        />
+                        <div className="app__cmbtn">
+                            <button className="app__sbtn" type="submit">Enviar</button>
+                            <button className="app__cbtn" type="button" onClick={toggleModal}><AiOutlineClose /></button>
+                        </div> 
+                    </form>
+                </div>
+            )}  
                 </div>
                 <div className="app__contatos-maps">
                     <iframe
@@ -35,10 +104,8 @@ const Contatos = () => {
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade" 
                     />
-                </div>
-                
-            </div>
-            
+                </div>                
+            </div>          
         </div>
 
     );

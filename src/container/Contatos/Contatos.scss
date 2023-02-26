@@ -100,7 +100,107 @@
 
            
         }
+
+        .app__cmodal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            form {
+                width: 30%;
+                margin: 20px;
+                padding: 20px;
+
+                border: 1px solid gold;
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                label {
+                    font-weight: 600;
+                    font-family: 'Roboto', sans-serif;
+                    letter-spacing: 0.1em;
+                    color: #fff;
+                }
+
+                input {
+                    outline: none;
+                    border: 1px solid gold;
+                    border-radius: 25px;
+
+                    
+
+                }
+                
+
+                textarea {
+                    border: 1px solid gold;
+                    border-radius: 5px;
+                    resize: none;
+                }
+            }
+
+            .app__cmbtn {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                gap: 20px;
+
+                .app__sbtn {
+
+                    width: 20%;
+
+                    color: #000;
+                    background-color: #fff;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 700;
+                    letter-spacing: 0.04em;
+                    line-height: 28px;
+                    font-size: 1rem;
+                    padding: 0.5rem 1.5rem;
+                    border-radius: 20px;
+                    border: 1px solid #fff;
+                    outline: none; 
+                    transition: 0.20s ease-in-out;
+                    
+                    cursor: pointer;
+                }
+
+                .app__sbtn:hover {
+                    color: gold;
+                    background: transparent;
+                    border-color: gold;
+                }
+
+                .app__cbtn {
+                    background-color: transparent;
+                    border: none;
+                    color: #fff;
+                    font-size: 2rem;
+
+                    cursor: pointer;  
+                }
+
+                .app__cbtn:hover {
+                    color: gold; 
+                }
+            }
+        }
     }
+
+    
 }
 
 @media screen and (max-width: 768px) {
