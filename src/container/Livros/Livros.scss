@@ -36,7 +36,7 @@
     padding-right: 2rem;
    }
 
-   .app__livros-content button {
+   .app__livros-content a {
     margin-top: 1rem;
 
     color: #000;
@@ -50,13 +50,14 @@
     border-radius: 20px;
     border: 1px solid #fff;
     outline: none; 
+    text-decoration: none;
     transition: 0.20s ease-in-out;
     
     cursor: pointer;
 
    }
 
-   .app__livros-content button:hover {
+   .app__livros-content a:hover {
     color: gold;
     background: transparent;
     border-color: gold;
@@ -173,7 +174,7 @@
          padding-right: 0;
         }
      
-        .app__livros-content button {
+        .app__livros-content a {
          margin-top: 1rem;
      
          color: #000;
@@ -193,7 +194,7 @@
      
         }
      
-        .app__livros-content button:hover {
+        .app__livros-content a:hover {
          color: gold;
          background: transparent;
          border-color: gold;

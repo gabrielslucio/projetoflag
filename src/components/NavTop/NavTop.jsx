@@ -18,8 +18,6 @@ function NavTop() {
 
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
-
-    console.log("search", searchTerm);
   };
 
   return (
