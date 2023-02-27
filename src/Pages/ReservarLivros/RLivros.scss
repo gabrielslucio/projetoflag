@@ -366,36 +366,31 @@
                             border-color: #fff;
                             color: #fff;
                         }
-
-
                 }
-
-              
-
-               
-
-                
-                
-
-                
-
             }
-
-            
-
-           
         }
     }
+}
 
-   
+@media screen and (max-width: 320px) {
+    .app__rlivros {
+        overflow: hidden;
+        display: flex;
 
-  
-       
+        flex-direction: column;
+        
+        .app__rlivros-container{
 
-    
+            .app__rlivros-livros {
 
-       
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
 
-      
-
+        .app__rlivros-comments {
+            display: none;
+        }
+    }
 }
