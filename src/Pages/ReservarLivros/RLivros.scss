@@ -377,18 +377,15 @@
         .app__rlivros-modal {
             
             .app__rlivros-mcontent {
-
                 height: 600px;
 
-                h2 {
-                    
+                h2 {                    
                     text-align: center;
                 }
 
                 form {
 
                     label {
-
                         text-align: center;
 
                         input {
@@ -431,6 +428,31 @@
 
         .app__rlivros-comments {
             display: none;
-        }        
+        }
+        
+        .app__rlivros-modal {
+
+            .app__rlivros-mcontent {
+
+                width: 100%;
+
+                h2 {
+                    margin: 0 10px 0 10px;
+                    font-size: 2rem;
+                }
+
+                form {
+                    margin-bottom: 30px;
+
+                    label {
+                        font-size: 1rem;
+
+                        input {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
