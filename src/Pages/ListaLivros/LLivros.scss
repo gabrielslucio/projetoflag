@@ -209,6 +209,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .app__llivros-header {
+            h1 {
+                font-size: 3rem;
+            }
+        }
     }
 }
 
