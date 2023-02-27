@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { AiFillStar, AiOutlineClose } from 'react-icons/ai';
-import books from '../../constants/books';
-import images from '../../constants/images';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { AiFillStar, AiOutlineClose } from "react-icons/ai";
+import books from "../../constants/books";
+import images from "../../constants/images";
 
-import './RLivros.scss';
-
-
-
+import "./RLivros.scss";
 
 const RLivros = () => {
   const { id } = useParams();
@@ -25,12 +22,10 @@ const RLivros = () => {
     setShowModal(false);
   };
 
- 
-
   const ReservationModal = () => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [address, setAddress] = useState('');
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [address, setAddress] = useState("");
     const [nameError, setNameError] = useState(false);
     const [emailError, setEmailError] = useState(false);
     const [addressError, setAddressError] = useState(false);
@@ -53,96 +48,105 @@ const RLivros = () => {
           timestamp: new Date().getTime(),
         };
 
-        const reservations = JSON.parse(localStorage.getItem('reservations') || '[]');
+        const reservations = JSON.parse(
+          localStorage.getItem("reservations") || "[]"
+        );
 
-        localStorage.setItem('reservations', JSON.stringify([...reservations, reservationData]));
-      
-        
-        handleModalClose(); 
+        localStorage.setItem(
+          "reservations",
+          JSON.stringify([...reservations, reservationData])
+        );
+
+        handleModalClose();
       }
-
-      
     };
 
     const handleModalClose = () => {
-      setName('');
-      setEmail('');
-      setAddress('');
+      setName("");
+      setEmail("");
+      setAddress("");
       setNameError(false);
       setEmailError(false);
       setAddressError(false);
       setShowModal(false);
     };
-    
 
-      return (
-        <div>
-          {showModal && (
+    return (
+      <div>
+        {showModal && (
           <div className="app__rlivros-modal">
             <div className="app__rlivros-mcontent">
               <h2>Reserve o livro {book.name}</h2>
               <form onSubmit={handleFormSubmit}>
                 <label>
                   Nome:
-                  <input 
+                  <input
                     id="nome"
                     name="nome"
-                    type="text" 
-                    value={name} onChange={(event) => setName(event.target.value)} 
-                    required />
+                    type="text"
+                    value={name}
+                    onChange={(event) => setName(event.target.value)}
+                    required
+                  />
                 </label>
                 <label>
                   Email:
-                  <input 
+                  <input
                     id="email"
                     name="email"
-                    type="email" value={email} onChange={(event) => 
-                    setEmail(event.target.value)} 
+                    type="email"
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
                     required
                   />
                 </label>
                 <label>
                   Endereço:
-                  <input 
+                  <input
                     id="endereco"
                     name="endereco"
-                    type="text" value={address} 
-                    onChange={(event) => setAddress(event.target.value)} 
-                    required 
+                    type="text"
+                    value={address}
+                    onChange={(event) => setAddress(event.target.value)}
+                    required
                   />
-                </label>                
-                <div className="app__btnm">  
+                </label>
+                <div className="app__btnm">
                   <button type="submit">Reservar</button>
                 </div>
-              </form> 
+              </form>
               <div className="app__mx">
-              <button onClick={handleModalClose}><AiOutlineClose /></button>
+                <button onClick={handleModalClose}>
+                  <AiOutlineClose />
+                </button>
               </div>
             </div>
           </div>
-          )}
-        </div>
-      );    
+        )}
+      </div>
+    );
   };
-
 
   useEffect(() => {
     const bookData = books.find((book) => book.id === Number(id));
     setBook(bookData);
 
-    const storedComments = JSON.parse(localStorage.getItem(`book_${id}_comments`));
+    const storedComments = JSON.parse(
+      localStorage.getItem(`book_${id}_comments`)
+    );
     if (storedComments) {
-        setComments(storedComments);
+      setComments(storedComments);
     }
   }, [id]);
 
   useEffect(() => {
-    const storedComments = JSON.parse(localStorage.getItem(`book_${id}_comments`));
+    const storedComments = JSON.parse(
+      localStorage.getItem(`book_${id}_comments`)
+    );
     if (storedComments) {
-        setComments(storedComments);
+      setComments(storedComments);
     }
   }, [id]);
-
 
   useEffect(() => {
     localStorage.setItem(`book-${id}-comments`, JSON.stringify(comments));
@@ -164,46 +168,45 @@ const RLivros = () => {
   const handleCommentSubmit = (comment) => {
     const updatedComments = [...comments, comment];
     setComments(updatedComments);
-    localStorage.setItem(`book_${id}_comments`, JSON.stringify(updatedComments));
+    localStorage.setItem(
+      `book_${id}_comments`,
+      JSON.stringify(updatedComments)
+    );
   };
 
   const CommentBox = ({ onSubmit }) => {
-    const [comment, setComment] = useState('');
-  
+    const [comment, setComment] = useState("");
+
     const handleCommentChange = (event) => {
       setComment(event.target.value);
     };
-  
+
     const handleSubmit = (event) => {
       event.preventDefault();
       onSubmit(comment);
-      setComment('');
+      setComment("");
     };
-  
+
     return (
       <div className="app__rlivros-comment">
-        <form 
-            className="app__rlivros-cform"
-            onSubmit={handleSubmit}>
+        <form className="app__rlivros-cform" onSubmit={handleSubmit}>
           <label className="app__rlivros-label">
             <h4>Adiciona um comentário:</h4>
             <textarea
-                className="app__rlivros-textarea" 
-                maxLength="50"
-                value={comment} 
-                onChange={handleCommentChange} 
-                required
+              className="app__rlivros-textarea"
+              maxLength="50"
+              value={comment}
+              onChange={handleCommentChange}
+              required
             />
           </label>
-            <button
-                className="app__rlivros-bform"
-                type="submit">Comenta
-            </button>
+          <button className="app__rlivros-bform" type="submit">
+            Comenta
+          </button>
         </form>
       </div>
     );
   };
-
 
   return (
     <div className="app__rlivros">
@@ -215,7 +218,7 @@ const RLivros = () => {
         <div className="app__rlivros-livros">
           <h2>{book.author}</h2>
           <img
-            src={images[`book${book.id.toString().padStart(2, '0')}`]}
+            src={images[`book${book.id.toString().padStart(2, "0")}`]}
             alt={`Imagem do livro ${book.name}`}
           />
           <h3>Descrição</h3>
@@ -229,7 +232,7 @@ const RLivros = () => {
                 <button
                   type="button"
                   key={index}
-                  className={index <= rating || index <= hover ? 'on' : 'off'}
+                  className={index <= rating || index <= hover ? "on" : "off"}
                   onClick={() => setRating(index)}
                   onMouseEnter={() => setHover(index)}
                   onMouseLeave={() => setHover(rating)}
@@ -244,23 +247,24 @@ const RLivros = () => {
         </div>
 
         <div className="app__rlivros-rbtn">
-          <button type="button" onClick={handleReservarClick}>Reservar</button>
+          <button type="button" onClick={handleReservarClick}>
+            Reservar
+          </button>
         </div>
       </div>
 
       <div className="app__rlivros-comments">
-            <CommentBox onSubmit={handleCommentSubmit} />
-            {comments.map((comment, index) => (
-                <div className="app__rlivros-cc">
-                    <div className="app__rlivros-container">
-                        <p key={index}>{comment}</p> 
-                    </div>
-                </div>
-              
-            ))}
-        </div>
+        <CommentBox onSubmit={handleCommentSubmit} />
+        {comments.map((comment, index) => (
+          <div className="app__rlivros-cc">
+            <div className="app__rlivros-container">
+              <p key={index}>{comment}</p>
+            </div>
+          </div>
+        ))}
+      </div>
 
-        {showModal && <ReservationModal />}
+      {showModal && <ReservationModal />}
     </div>
   );
 };
