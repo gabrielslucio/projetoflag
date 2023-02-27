@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Projeto FLAG - Biblioteca X
+Este projeto, denominado de Biblioteca X, é resultado de um trabalho de conclusão de módulo no curso profissional de FullStack Development da escola FLAG. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O projeto foi desenvolvido utilizando a framework React Native, com o intuito de apresentar funcionalidades estudades durante o curso e o de consolidação do conhecimento adquirido.
 
-## Available Scripts
+A plataforma desenvolvida, consiste numa Biblioteca virutal que permite aos usuários navegar e visualizar um catálogo dinâmico de livros.
 
-In the project directory, you can run:
+A plataforma possibilita também que os usuários selecionem um livro, façam a reserva do mesmo e ainda podem avaliar e comentar o livro.
 
-### `npm start`
+Toda esta informação é simulada em tempo real através do uso do armazenamento local (localStorage).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+É importante, também, destacar que este projeto foi desenvolvido com funcionalidades responsive em mente, adaptando-se a diferentes dispositivos móveis, como tablets e smartphones. Esta adaptação garante ao usuário uma experiência satisfatória e acessível em diferentes telas e dispositivos, apresentando assim, uma solução completa e versátil para a navegação e interção do usuário com o catálogo de livros da biblioteca virutal. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Em síntese, o projeto Biblioteca X representa um conjunto de habilidades adquiridas ao longo do curso e dmonestra a minha capacidade como desenvolvedor em utilizar tecnologias relevantes para a construção de uma plataforma de alta qualidade. 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Funcionalidades
 
-### `npm run build`
+- Catálogo dinâmico de livros;
+- Reserva de livro simulado em localStorage;
+- Rating de livro simulado em localStorage;
+- Comentários de livro simulado em localStorage;
+- Formulários em Modal.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![homepage (2)](https://user-images.githubusercontent.com/117771594/221677530-925734bb-0de2-4ca7-acdb-1a42516669bd.jpg)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![listradelivros](https://user-images.githubusercontent.com/117771594/221677692-29de3d94-1174-401c-9029-f4ef62bc71da.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![reserva](https://user-images.githubusercontent.com/117771594/221677703-e8005498-8636-4c5a-88cb-30dd23b179d3.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Autores
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [@gabrielslucio](https://github.com/gabrielslucio)
