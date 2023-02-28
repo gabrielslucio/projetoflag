@@ -3,17 +3,17 @@ Este projeto, denominado de Biblioteca X, é resultado de um trabalho de conclus
 
 O projeto foi desenvolvido utilizando a framework React JS, com o intuito de apresentar funcionalidades estudadas durante o curso e o de consolidação do conhecimento adquirido.
 
-A plataforma desenvolvida consiste numa Biblioteca virutal que permite aos usuários navegar e visualizar um catálogo dinâmico de livros.
+A plataforma desenvolvida consiste numa Biblioteca virtual que permite aos usuários navegar e visualizar um catálogo dinâmico de livros.
 
 A plataforma possibilita também que os usuários selecionem um livro, façam a reserva do mesmo e ainda possam avaliar e comentar o livro.
 
 Toda esta informação é simulada em tempo real através do uso do armazenamento local (localStorage).
 
-É importante, também, destacar que este projeto foi desenvolvido com funcionalidades responsive em mente, adaptando-se a diferentes dispositivos móveis, como tablets e smartphones. 
+É importante, também, destacar que este projeto foi desenvolvido com funcionalidades responsive em mente, adaptando-se a diferentes dispositivos móveis, como tablets e smartphones.
 
-Esta adaptação garante ao usuário uma experiência satisfatória e acessível em diferentes telas e dispositivos, apresentando assim, uma solução completa e versátil para a navegação e interção do usuário com o catálogo de livros da biblioteca virutal. 
+Esta adaptação garante ao usuário uma experiência satisfatória e acessível em diferentes telas e dispositivos, apresentando assim, uma solução completa e versátil para a navegação e interação do usuário com o catálogo de livros da biblioteca virtual.
 
-Em síntese, o projeto Biblioteca X representa um conjunto de habilidades adquiridas ao longo do curso e dmonestra a minha capacidade como desenvolvedor em utilizar tecnologias relevantes para a construção de uma plataforma de alta qualidade. 
+Em síntese, o projeto Biblioteca X representa um conjunto de habilidades adquiridas ao longo do curso e demonstra a minha capacidade como desenvolvedor em utilizar tecnologias relevantes para a construção de uma plataforma de alta qualidade.
 
 
 ## Funcionalidades

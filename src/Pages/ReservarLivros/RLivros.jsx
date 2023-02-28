@@ -78,7 +78,7 @@ const RLivros = () => {
             <div className="app__rlivros-mcontent">
               <h2>Reserve o livro {book.name}</h2>
               <form onSubmit={handleFormSubmit}>
-                <label>
+                <label HTMLfor="nome">
                   Nome:
                   <input
                     id="nome"
@@ -89,7 +89,7 @@ const RLivros = () => {
                     required
                   />
                 </label>
-                <label>
+                <label HTMLfor="email">
                   Email:
                   <input
                     id="email"
@@ -100,7 +100,7 @@ const RLivros = () => {
                     required
                   />
                 </label>
-                <label>
+                <label HTMLfor="endereco">
                   Endereço:
                   <input
                     id="endereco"

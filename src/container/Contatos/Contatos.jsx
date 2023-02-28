@@ -73,7 +73,7 @@ const Contatos = () => {
               <div className="app__cmodal">
                 <form onSubmit={handleSubmit}>
                   <h2>Envie um email</h2>
-                  <label htmlFor="to">Para:</label>
+                  <label HTMLfor="para">Para:</label>
                   <input
                     type="email"
                     id="para"
@@ -82,7 +82,7 @@ const Contatos = () => {
                     value={paraValue}
                     onChange={(e) => setParaValue(e.target.value)}
                   />
-                  <label htmlFor="sujeito">Sujeito:</label>
+                  <label HTMLfor="sujeito">Sujeito:</label>
                   <input
                     type="email"
                     id="sujeito"
@@ -91,7 +91,7 @@ const Contatos = () => {
                     onChange={(e) => setSujeitoValue(e.target.value)}
                     required
                   />
-                  <label htmlFor="message">Mensagem:</label>
+                  <label HTMLfor="messagem">Mensagem:</label>
                   <textarea
                     id="mensagem"
                     name="mensagem"
