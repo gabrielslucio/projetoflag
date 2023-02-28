@@ -1,7 +1,7 @@
 # Projeto FLAG - Biblioteca X
 Este projeto, denominado de Biblioteca X, é resultado de um trabalho de conclusão de módulo no curso profissional de FullStack Development da escola FLAG. 
 
-O projeto foi desenvolvido utilizando a framework React Native, com o intuito de apresentar funcionalidades estudadas durante o curso e o de consolidação do conhecimento adquirido.
+O projeto foi desenvolvido utilizando a framework React JS, com o intuito de apresentar funcionalidades estudadas durante o curso e o de consolidação do conhecimento adquirido.
 
 A plataforma desenvolvida consiste numa Biblioteca virutal que permite aos usuários navegar e visualizar um catálogo dinâmico de livros.
 
