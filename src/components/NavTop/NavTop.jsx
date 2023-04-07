@@ -7,10 +7,12 @@ import images from "../../constants/images";
 
 import "./NavTop.scss";
 import books from "../../constants/books";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function NavTop() {
   const [value, setValue] = useState("");
+
+  const item = books;
 
   const onChange = (event) => {
     setValue(event.target.value);
@@ -19,6 +21,21 @@ function NavTop() {
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
   };
+
+  const handleReserveClick = (event) => {
+    event.preventDefault();
+
+    const searchTerm = value.toLowerCase();
+    const book = books.find((item) => item.name.toLowerCase() === searchTerm);
+
+    if (book) {
+      navigate(`/livro/${book.id}`);
+    }
+   
+
+  }
+
+  const navigate = useNavigate();
 
   return (
     <nav className="app__navbar">
@@ -53,7 +70,7 @@ function NavTop() {
             <div className="app__navbar-buttonc">
               <button
                 className="app__navbar-button"
-                onClick={() => onSearch(value)}
+                onClick={handleReserveClick}
               >
                 <FaSearch></FaSearch>
               </button>
@@ -81,7 +98,7 @@ function NavTop() {
                   <table>
                     <tr>
                       <td>
-                        <a href="#">{item.name}</a>
+                        <button onClick={() => handleReserveClick(item)}>{item.name}</button>
                       </td>
                     </tr>
                   </table>

@@ -4,19 +4,14 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 
+import books from "../../constants/books";
+
 import images from "../../constants/images";
 
 import "./Livros.scss";
 
 const Livros = () => {
   const scrollRef = React.useRef(null);
-
-  const books = [
-    { id: 1, name: "Book 1" },
-    { id: 2, name: "Book 2" },
-    { id: 3, name: "Book 3" },
-    { id: 4, name: "Book 4" },
-  ];
 
   const scroll = (direction) => {
     const { current } = scrollRef;
