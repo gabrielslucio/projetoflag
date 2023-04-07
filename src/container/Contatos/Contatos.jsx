@@ -35,6 +35,10 @@ const Contatos = () => {
       setSujeitoValue("");
       setMensagemValue("");
       setEmailSent(true);
+
+      setTimeout(() => {
+        setShowModal(!showModal);
+      }, 2000);
     };
 
   

@@ -26,6 +26,10 @@ const CriarConta = () => {
         localStorage.setItem('accountData', JSON.stringify(accountData));
         setAccountCreated(true);
         setAccountAlert(true);
+
+        setTimeout(() => {
+            window.location.href="/minhaconta";
+        }, 2000);
         
     }
 
