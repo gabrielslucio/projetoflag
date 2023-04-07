@@ -1,13 +1,15 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import './MinhaConta.css'
 
 const MinhaConta = () => {
+
     return (
         <section className="app__myacc">
             <div className="app__myacc-container">
                 <div className="app__login-form">
-                    <form className="app__l-content" action="">
+                    <form className="app__l-content">
                         <label htmlFor="utilizador">
                             Utilizador:
                             <input 
@@ -32,7 +34,8 @@ const MinhaConta = () => {
                             <button>Entrar</button>
                         </div>  
                         <div className="app__c-acc">
-                             <button>Criar Conta</button>
+                            <NavLink to="/criarconta">Criar Conta
+                            </NavLink>
                         </div>                       
                     </form>               
                 </div>

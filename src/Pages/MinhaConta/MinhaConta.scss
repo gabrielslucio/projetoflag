@@ -55,6 +55,12 @@
                         border: 3px solid gold;
                         border-radius: 25px;
                         outline: #fff;
+
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        letter-spacing: 0.1rem;
+
                     }
 
                 }
@@ -62,7 +68,8 @@
                 .app__l-btns {
                     
                     button {
-                        margin-top: 1rem;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
                 
                         color: #000;
                         background-color: #fff;
@@ -90,11 +97,11 @@
 
                 .app__c-acc {
                     
-                    button {
-                        margin-top: 1rem;
+                    a {
                 
                         color: #000;
                         background-color: #fff;
+                        text-decoration: none;
                         font-family: 'Roboto', sans-serif;
                         font-weight: 700;
                         letter-spacing: 0.04em;
@@ -109,7 +116,7 @@
                         cursor: pointer;
                     }
 
-                    button:hover {
+                    a:hover {
                         color: gold;
                         background-color: #252524;
                         border-color: gold;

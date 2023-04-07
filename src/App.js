@@ -10,6 +10,7 @@ import FooterBot from './components/FooterBot/FooterBot';
 import LLivros from './Pages/ListaLivros/LLivros';
 import RLivros from './Pages/ReservarLivros/RLivros';
 import MinhaConta from './Pages/MinhaConta/MinhaConta';
+import CriarConta from './Pages/CriarConta/CriarConta';
 
 import './App.scss';
 import '../src/styles/Body.scss';
@@ -29,28 +30,11 @@ function App() {
             <Route path="/llivros" element={ <LLivros /> } />
             <Route exact path="/livro/:id" element= { <RLivros/> } />
             <Route path="/minhaconta" element={ <MinhaConta /> } />
+            <Route path="/criarconta" element={ <CriarConta /> } />
           </Routes>   
         </ScrollToTop>         
       <FooterTop />
       <FooterBot />
-
-
-        
-      { /* 
-        <Routes>
-          
-          <Route index path="/" element={ <Header /> } />
-          <Route path="/livros" element={ <Livros /> } />
-          <Route path="/servicos" element={ <Servicos /> } />
-          <Route path="/eventos" element={ <Eventos /> } />
-          <Route path="/contatos" element={ <Contatos /> } />
-          <Route path="/reserva-livros" element={ <RLivros /> } />
-          
-          
-        </Routes>
-
-    */}
-     
     </div>
     </BrowserRouter>
   );
