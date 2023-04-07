@@ -11,6 +11,7 @@ const Contatos = () => {
     const [paraValue, setParaValue] = useState("");
     const [sujeitoValue, setSujeitoValue] = useState("");
     const [mensagemValue, setMensagemValue] = useState("");
+    const [emailSent, setEmailSent] = useState(false);
   
     const toggleModal = () => {
       setShowModal(!showModal);
@@ -30,11 +31,12 @@ const Contatos = () => {
   
       localStorage.setItem("emails", JSON.stringify(emails));
   
-      toggleModal();
       setParaValue("");
       setSujeitoValue("");
       setMensagemValue("");
+      setEmailSent(true);
     };
+
   
     return (
       <div className="app__contatos" id="app-contatos">
@@ -71,16 +73,22 @@ const Contatos = () => {
             </div>
             {showModal && (
               <div className="app__cmodal">
+                {emailSent && (
+                  <div className="app__falert">
+                    <p>O email foi enviado com sucesso!</p>
+                  </div>
+                )}
                 <form onSubmit={handleSubmit}>
                   <h2>Envie um email</h2>
                   <label HTMLfor="para">Para:</label>
                   <input
-                    type="email"
+                    type="text"
                     id="para"
                     name="para"
                     placeholder="biblioteca@gmail.com"
                     value={paraValue}
                     onChange={(e) => setParaValue(e.target.value)}
+                    readOnly
                   />
                   <label HTMLfor="sujeito">Sujeito:</label>
                   <input
