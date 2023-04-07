@@ -9,6 +9,7 @@ import FooterBot from './components/FooterBot/FooterBot';
 
 import LLivros from './Pages/ListaLivros/LLivros';
 import RLivros from './Pages/ReservarLivros/RLivros';
+import MinhaConta from './Pages/MinhaConta/MinhaConta';
 
 import './App.scss';
 import '../src/styles/Body.scss';
@@ -27,6 +28,7 @@ function App() {
             <Route index path="/" element={ <Home /> } />
             <Route path="/llivros" element={ <LLivros /> } />
             <Route exact path="/livro/:id" element= { <RLivros/> } />
+            <Route path="/minhaconta" element={ <MinhaConta /> } />
           </Routes>   
         </ScrollToTop>         
       <FooterTop />
