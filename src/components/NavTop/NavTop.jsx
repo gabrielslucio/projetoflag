@@ -118,7 +118,7 @@ function NavTop() {
             <li className="app__navbar-schedule">
              
                 <AiFillClockCircle className="clock" />
-                  <NavLink to={""}>
+                  <NavLink to={"/horario"}>
                     Horário
                   </NavLink>
                 
@@ -126,7 +126,7 @@ function NavTop() {
             </li>
             <li className="app__navbar-cartao">              
                 <FaAddressCard className="card" />
-                  <NavLink to={""}>
+                  <NavLink to={"/cartao"}>
                     Fazer cartão
                   </NavLink>
             </li>

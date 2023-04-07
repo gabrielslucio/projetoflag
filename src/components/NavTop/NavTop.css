@@ -204,6 +204,9 @@
   width: 100%;
   height: 49px;
 }
+.app__navbar .app__navbar-container .app__navbar-userbox .active {
+  color: gold;
+}
 .app__navbar .app__navbar-container .app__navbar-userbox a {
   color: #252524;
   font-family: "Roboto", sans-serif;
