@@ -1,0 +1,145 @@
+.app__c-account {
+    width: 100%;
+    height: 600px;
+    
+    display: flex;
+    justify-content: center;
+
+    .app__c-acc-container {
+        background-color: #fff;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .app__falert {
+            margin: 20px;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+
+            p {
+                color: #fff;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 300;
+                text-transform: uppercase;
+                
+            }
+        }
+
+        .app__acc-f {
+            width: 50%;
+            height: 100%;
+            background-color: hsla(60, 1%, 14%, 0.7);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 30px;
+
+            h1 {
+                color: #fff;
+
+                font-family: 'Roboto', sans-serif;
+                font-size: 2rem;
+
+                text-transform: uppercase;
+
+                letter-spacing: 0.1rem;
+            }
+
+            label {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                gap: 10px;
+                
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.5rem;
+                font-weight: 700;
+
+                letter-spacing: 0.2rem;
+
+                text-transform: uppercase;
+
+                color: gold;
+
+                input {
+                    height: 30px;
+                    width: 400px;
+                    padding: 0 10px 0 10px;
+                    margin-left: 10px;
+                    border: 3px solid gold;
+                    border-radius: 25px;
+                    outline: #fff;
+
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    letter-spacing: 0.1rem;
+
+                }
+            }
+
+            button {
+                       
+                        color: #000;
+                        background-color: #fff;
+                        font-family: 'Roboto', sans-serif;
+                        font-weight: 700;
+                        letter-spacing: 0.04em;
+                        line-height: 28px;
+                        font-size: 16px;
+                        padding: 0.5rem 1.5rem;
+                        border-radius: 20px;
+                        border: 1px solid #fff;
+                        outline: none; 
+                        transition: 0.20s ease-in-out;
+                        
+                        cursor: pointer;
+                    }
+
+            button:hover {
+                    color: gold;
+                    background-color: #252524;
+                    border-color: gold;
+            }
+
+            a {
+                text-decoration: none;
+        
+                color: #000;
+                background-color: #fff;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                letter-spacing: 0.04em;
+                line-height: 28px;
+                font-size: 16px;
+                padding: 0.5rem 1.5rem;
+                border-radius: 20px;
+                border: 1px solid #fff;
+                outline: none; 
+                transition: 0.20s ease-in-out;
+                
+                cursor: pointer;
+            }
+
+            a:hover {
+                color: gold;
+                background-color: #252524;
+                border-color: gold;
+            }
+
+        }
+    }
+
+
+}
