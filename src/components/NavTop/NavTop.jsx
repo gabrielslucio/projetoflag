@@ -110,22 +110,25 @@ function NavTop() {
         <div className="app__navbar-userbox">
           <ul className="app__navbar-user">
             <li className="app__navbar-account">
-              <a href="minha conta">
                 <FaUser className="user" />
-                <p>Minha Conta</p>
-              </a>
+                <NavLink to={"/minhaconta"}>
+                  Minha Conta
+                </NavLink>              
             </li>
             <li className="app__navbar-schedule">
-              <a href="horário">
+             
                 <AiFillClockCircle className="clock" />
-                <p>Horário</p>
-              </a>
+                  <NavLink to={""}>
+                    Horário
+                  </NavLink>
+                
+              
             </li>
-            <li className="app__navbar-cartao">
-              <a href="cartao">
+            <li className="app__navbar-cartao">              
                 <FaAddressCard className="card" />
-                <p>Fazer cartão</p>
-              </a>
+                  <NavLink to={""}>
+                    Fazer cartão
+                  </NavLink>
             </li>
           </ul>
         </div>
