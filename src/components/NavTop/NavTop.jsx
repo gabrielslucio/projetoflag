@@ -12,8 +12,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 function NavTop() {
   const [value, setValue] = useState("");
 
-  const item = books;
-
   const onChange = (event) => {
     setValue(event.target.value);
   };
@@ -34,6 +32,8 @@ function NavTop() {
    
 
   }
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
   const navigate = useNavigate();
 
@@ -109,20 +109,25 @@ function NavTop() {
 
         <div className="app__navbar-userbox">
           <ul className="app__navbar-user">
-            <li className="app__navbar-account">
-                <FaUser className="user" />
-                <NavLink to={"/minhaconta"}>
-                  Minha Conta
-                </NavLink>              
+          <li className="app__navbar-account">
+                {isLoggedIn ? (
+                  <>
+                    <FaUser className="user" />
+                    <NavLink to={"/painelconta"}>Ver Conta</NavLink>
+                  </>
+
+                ) : (
+                  <>
+                    <FaUser className="user" />
+                    <NavLink to={"/minhaconta"}>Minha Conta</NavLink>
+                  </>
+                )}
             </li>
-            <li className="app__navbar-schedule">
-             
+            <li className="app__navbar-schedule">             
                 <AiFillClockCircle className="clock" />
                   <NavLink to={"/horario"}>
                     Horário
                   </NavLink>
-                
-              
             </li>
             <li className="app__navbar-cartao">              
                 <FaAddressCard className="card" />

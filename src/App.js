@@ -11,6 +11,7 @@ import LLivros from './Pages/ListaLivros/LLivros';
 import RLivros from './Pages/ReservarLivros/RLivros';
 import MinhaConta from './Pages/MinhaConta/MinhaConta';
 import CriarConta from './Pages/CriarConta/CriarConta';
+import PainelConta from './Pages/PainelConta/PainelConta';
 
 import './App.scss';
 import '../src/styles/Body.scss';
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/livro/:id" element= { <RLivros/> } />
             <Route path="/minhaconta" element={ <MinhaConta /> } />
             <Route path="/criarconta" element={ <CriarConta /> } />
+            <Route path="/painelconta" element={ <PainelConta /> } />
           </Routes>   
         </ScrollToTop>         
       <FooterTop />
