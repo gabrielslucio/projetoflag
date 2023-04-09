@@ -29,11 +29,12 @@ function NavTop() {
     if (book) {
       navigate(`/livro/${book.id}`);
     }
-   
-
   }
 
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+  const account = JSON.parse(localStorage.getItem("accounts"));
+
+  
 
   const navigate = useNavigate();
 
@@ -113,7 +114,7 @@ function NavTop() {
                 {isLoggedIn ? (
                   <>
                     <FaUser className="user" />
-                    <NavLink to={"/painelconta"}>Ver Conta</NavLink>
+                    <NavLink to={`/painelconta/${account.id}`}>Ver Conta</NavLink>
                   </>
 
                 ) : (
@@ -122,6 +123,9 @@ function NavTop() {
                     <NavLink to={"/minhaconta"}>Minha Conta</NavLink>
                   </>
                 )}
+              
+              
+              
             </li>
             <li className="app__navbar-schedule">             
                 <AiFillClockCircle className="clock" />

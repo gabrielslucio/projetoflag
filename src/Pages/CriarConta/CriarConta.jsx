@@ -21,9 +21,19 @@ const CriarConta = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
         const { username, password } = formData;
-        const accountData = { username, password };
-        localStorage.setItem('accountData', JSON.stringify(accountData));
+
+        const accountID = Math.random().toString(36).substring(2, 9);
+
+        const newAccount = { id: accountID, username, password};
+
+        const existingAccounts = JSON.parse(localStorage.getItem("accounts")) || [];
+
+        const updatedAccounts = [...existingAccounts, newAccount];
+
+        localStorage.setItem("accounts", JSON.stringify(updatedAccounts));
+
         setAccountCreated(true);
         setAccountAlert(true);
 

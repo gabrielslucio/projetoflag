@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import './MinhaConta.css'
 
@@ -19,20 +19,26 @@ const MinhaConta = () => {
         }
     };
 
+    const navigate = useNavigate();
+
     const handleSubmit = (event) => {
         event.preventDefault();
+       
+        const accounts = JSON.parse(localStorage.getItem("accounts"));
+       
+        const account = accounts.find(
+            (acc) => acc.username === username && acc.password === password
+        );
 
-        const accountData = JSON.parse(localStorage.getItem("accountData"));
-        if (accountData && accountData.username === username && accountData.password === password) {
+        if (account) {
             setSuccessMessage(true);
             setErrorMessage(false);
 
             localStorage.setItem("isLoggedIn", true);
 
             setTimeout(() => {
-                window.location.href = "/";
-            }, 2000);
-
+                navigate(`/painelconta/${account.id}`);
+            }, 2000)
         } else {
             setErrorMessage(true);
             setSuccessMessage(false);

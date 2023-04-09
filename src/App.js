@@ -21,6 +21,7 @@ import ScrollToTop from './Router/ScrollToTop/ScrollToTop';
 
 
 function App() {
+  
   return (
     <BrowserRouter>
     <div className="App">  
@@ -32,7 +33,7 @@ function App() {
             <Route exact path="/livro/:id" element= { <RLivros/> } />
             <Route path="/minhaconta" element={ <MinhaConta /> } />
             <Route path="/criarconta" element={ <CriarConta /> } />
-            <Route path="/painelconta" element={ <PainelConta /> } />
+            <Route exact path="/painelconta/:id" element={ <PainelConta /> } />
           </Routes>   
         </ScrollToTop>         
       <FooterTop />

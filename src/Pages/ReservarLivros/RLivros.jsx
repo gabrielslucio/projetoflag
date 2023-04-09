@@ -8,6 +8,7 @@ import "./RLivros.scss";
 
 const RLivros = () => {
   const { id } = useParams();
+  
   const [book, setBook] = useState(null);
   const [hover, setHover] = useState(0);
   const [comments, setComments] = useState([]);
