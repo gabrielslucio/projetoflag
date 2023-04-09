@@ -15,6 +15,7 @@ import book10 from '../assets/book10.jpg';
 import event01 from '../assets/event01.png';
 import event02 from '../assets/event02.png';
 import event03 from '../assets/event03.png';
+import ppicture from '../assets/ppicture.jpg';
 
 export default { 
     logo,
@@ -33,5 +34,6 @@ export default {
     book10,
     event01,
     event02,
-    event03
+    event03,
+    ppicture
  };

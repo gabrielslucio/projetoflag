@@ -1,0 +1,224 @@
+.app__user-area {
+    width: 100%;
+    height: 600px;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .app__user-area-container {
+        width: 50%;
+        height: 100%;
+        background-color: hsla(60, 1%, 14%, 0.7);
+        
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: 1fr;
+       
+        
+
+        .app__profile-pic {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 20px;
+            position: relative;
+
+            button {
+                position: absolute;
+                top: 400px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+        
+                color: #000;
+                background-color: #fff;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 700;
+                letter-spacing: 0.04em;
+                line-height: 28px;
+                font-size: 16px;
+                padding: 0.5rem 1.5rem;
+                border-radius: 20px;
+                border: 1px solid #fff;
+                outline: none; 
+                transition: 0.20s ease-in-out;
+                
+                cursor: pointer;
+            }
+
+            button:hover {
+                color: gold;
+                background-color: #252524;
+                border-color: gold;
+            }
+
+            
+            
+            img {
+                width: 300px;
+                height: 300px;
+                border: 1px solid gold;
+            }
+        }
+
+        .app__info-list {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            li {
+                margin: 10px 0 10px 0;
+                color: #fff;
+                font-family: "Roboto", sans-serif;
+                font-size: 1rem;
+                letter-spacing: 0.1rem;
+
+                
+                span {
+                    color: gold;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    letter-spacing: 0.1rem;
+                }
+            }            
+        }
+
+        .app__cont-btn {
+           height: 100px;
+           grid-column-start: 1;
+           grid-column-end: 3;
+
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+
+           button {
+            margin-top: 20px;
+            margin-bottom: 20px;
+    
+            color: #000;
+            background-color: #fff;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            line-height: 28px;
+            font-size: 16px;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #fff;
+            outline: none; 
+            transition: 0.20s ease-in-out;
+            
+            cursor: pointer;
+        }
+
+        button:hover {
+            color: gold;
+            background-color: #252524;
+            border-color: gold;
+        }
+
+           
+        }
+
+        .app__u-m {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+
+            .app__m-content {
+                width: 350px;
+                height: 400px;
+                margin: 20px;
+                padding: 20px;
+                border: 1px solid gold;
+                background-color: #252524;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                h2 {
+                    color: #fff;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+
+                    letter-spacing: 0.1rem;
+                }
+
+                form {
+                    
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: left;
+
+                    label {
+                        color: #fff;
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 1.1rem;
+                        font-weight: 500;
+
+                        letter-spacing: 0.2rem;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        input {
+                            width: 300px;
+                            height: 30px;
+                            margin: 20px 0px 20px 0px;
+                            padding-left: 10px;
+
+                            border: 1px solid gold;
+                            border-radius: 25px;
+                            outline-color: #fff;
+
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 1.2rem;
+                            letter-spacing: 0.1rem;                            
+                        }
+
+                    }
+                }
+
+                button {
+                    border: none;
+                    background-color: transparent;
+                    color: gold;
+
+                    font-size: 2rem;
+                    transition: 0.3s ease-in-out;
+
+                    cursor: pointer;                   
+                }
+
+                button:hover {
+                    color: #fff;
+                }
+
+
+
+            }
+
+        }
+
+
+    }
+
+    
+}
